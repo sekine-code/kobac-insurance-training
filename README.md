@@ -1,2 +1,2 @@
-# kobac-insurance-training
+# MIC-insurance-training
 保険研修コンテンツ
