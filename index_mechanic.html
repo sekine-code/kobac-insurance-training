@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コバック×ミック自動車保険 メカニック向けトスアップトレーニングアプリ</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .kobac-red {
+            background-color: #E60012;
+        }
+        .kobac-red-text {
+            color: #E60012;
+        }
+        .mic-blue {
+            background-color: #005CAF;
+        }
+        .mic-blue-text {
+            color: #005CAF;
+        }
+        .btn-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md border-b-4 border-red-600 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="kobac-red text-white font-extrabold px-3 py-1 rounded-md text-xs md:text-sm tracking-wider">
+                    車検のコバック
+                </div>
+                <div class="mic-blue text-white font-extrabold px-3 py-1 rounded-md text-xs md:text-sm tracking-wider">
+                    ミック
+                </div>
+                <h1 class="font-black text-gray-800 text-sm md:text-lg hidden sm:block">自動車保険アドバイザートレーニング</h1>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs md:text-sm font-bold bg-red-100 text-red-800 px-3 py-1 rounded-full border border-red-300">
+                    <i class="fa-solid fa-wrench mr-1"></i>メカニック・トスアップ編
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-6 flex flex-col justify-center">
+
+        <!-- ==================== HOME SCREEN ==================== -->
+        <section id="screen-home" class="animate-fade-in flex flex-col justify-between space-y-6">
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10 border border-gray-100 flex flex-col md:flex-row items-center gap-8 my-auto">
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="space-y-2">
+                        <span class="text-red-600 font-black tracking-wide text-sm block">プロの整備視点 × フロント連携</span>
+                        <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+                            整備の説明から繋ぐ！<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">自動車保険トスアップ技術</span>
+                        </h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                        コバック自慢のメカニック・検査員の皆様、いつも高い技術でのお客様サポートをありがとうございます！<br>
+                        日頃、保険のお話をすることはないかもしれませんが、<b>「お車の状態（部品摩耗、サビ、ドラレコ配線、傷）を直接説明できる」</b>皆様は、実はお客様から最も信頼されている保険のキーパーソンです。<br>
+                        このアプリでは、日常の整備説明のなかから自然に保険の話題を切り出し、お役立ち情報を添えてフロントスタッフ（または保険部）へパスする<b>「トスアップ（トス）」
+
+                        </b>のコツをゲーム感覚で習得できます。
+                    </p>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl">
+                        <h3 class="font-bold text-blue-900 text-sm flex items-center">
+                            <i class="fa-solid fa-circle-info mr-2"></i>本日のメカニック研修目標
+                        </h3>
+                        <ul class="text-xs md:text-sm text-blue-800 mt-2 space-y-1 list-disc list-inside">
+                            <li>ドラレコ配線やSDカードの点検時に、通信型ドラレコの安心メリットを伝える</li>
+                            <li>タイヤや下回りの劣化説明から、自損事故（人傷・車両保険）の確認へ繋ぐ</li>
+                            <li>ブレーキパッド・ASV割引の話題、バッテリー劣化・レッカーサービスの話題からのトスアップ</li>
+                            <li>自分で契約手続きはせず、気づきを与えて「フロントにトス（バトンタッチ）」する流れの体得</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-50 rounded-xl p-6 border border-gray-200">
+                    <div class="text-center mb-6">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='120' height='120'><circle cx='50' cy='50' r='45' fill='%23E60012'/><rect x='25' y='45' width='50' height='30' rx='5' fill='white'/><circle cx='38' cy='75' r='8' fill='%23333'/><circle cx='62' cy='75' r='8' fill='%23333'/><path d='M30,45 L40,25 L60,25 L70,45 Z' fill='white'/><path d='M25,25 L35,15 L45,25 L40,30 L30,30 Z' fill='%23005CAF'/><text x='50' y='63' font-family='Arial' font-size='12' font-weight='bold' fill='%23E60012' text-anchor='middle'>KOBAC</text></svg>" alt="コバック車" class="w-24 h-24 mb-2">
+                        <p class="font-bold text-gray-800 text-lg">トレーニングメニュー</p>
+                        <p class="text-xs text-gray-400 mt-1">信頼される整備士のトスアップ技術を学ぼう！</p>
+                    </div>
+                    <div class="w-full space-y-3">
+                        <button onclick="startMode('story')" class="w-full py-4 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-3 text-base md:text-lg">
+                            <i class="fa-solid fa-comments text-xl"></i>
+                            <span>1. 会話シミュレーター（全10章）</span>
+                        </button>
+                        <button onclick="startMode('quiz')" class="w-full py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-3 text-base md:text-lg">
+                            <i class="fa-solid fa-circle-question text-xl"></i>
+                            <span>2. ニーズ喚起クイズ（全10問）</span>
+                        </button>
+                        <button onclick="startMode('sheet')" class="w-full py-3 bg-white hover:bg-gray-100 text-gray-700 border border-gray-300 font-bold rounded-xl shadow transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-3 text-sm">
+                            <i class="fa-solid fa-book-open text-gray-500"></i>
+                            <span>3. メカニック秘伝！トスアップ・カンペ集</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Info Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-500">
+                <div class="bg-white p-4 rounded-xl border border-gray-100 flex items-center space-x-3 shadow-sm">
+                    <div class="p-3 bg-red-100 rounded-full text-red-600"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">整備説明こそ最大のチャンス</h4>
+                        <p class="text-gray-500 text-xs">車の「不備・消耗」を説明するタイミングは、最も説得力があります！</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-gray-100 flex items-center space-x-3 shadow-sm">
+                    <div class="p-3 bg-blue-100 rounded-full text-blue-600"><i class="fa-solid fa-share-from-square"></i></div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">スマートなフロント・トス</h4>
+                        <p class="text-gray-500 text-xs">難しい説明は不要。「フロントでお調べしますね」と繋ぐだけで完了！</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-gray-100 flex items-center space-x-3 shadow-sm">
+                    <div class="p-3 bg-purple-100 rounded-full text-purple-600"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">一元事故対応の付加価値</h4>
+                        <p class="text-gray-500 text-xs">「代車即出」「自社工場修理」の強みを、整備のプロから直接語ろう！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== STORY MODE ==================== -->
+        <section id="screen-story" class="hidden flex-grow flex flex-col space-y-4 animate-fade-in">
+            <!-- Progress & Score Header -->
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-wrap justify-between items-center gap-4">
+                <div class="flex items-center space-x-3">
+                    <button onclick="goHome()" class="text-gray-500 hover:text-gray-700 p-1"><i class="fa-solid fa-arrow-left text-lg"></i></button>
+                    <div>
+                        <span id="story-chapter-badge" class="text-xs font-bold bg-red-100 text-red-700 px-2.5 py-0.5 rounded-full">第1章</span>
+                        <h3 id="story-chapter-title" class="font-black text-gray-800 text-sm md:text-base mt-1">会話進行中...</h3>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs font-bold text-gray-500">お客様の納得度:</span>
+                        <div class="w-24 md:w-32 bg-gray-200 rounded-full h-3 overflow-hidden">
+                            <div id="story-mood-bar" class="bg-gradient-to-r from-red-50 to-green-500 h-full transition-all duration-500" style="width: 50%;"></div>
+                        </div>
+                        <span id="story-mood-percent" class="text-xs font-bold text-gray-700">50%</span>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-gray-500 block">合計スコア</span>
+                        <span id="story-score" class="font-black text-blue-600 text-base md:text-lg">0 点</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dialogue Interaction Area -->
+            <div class="flex-grow grid grid-cols-1 lg:grid-cols-12 gap-4">
+                <!-- Customer info panel -->
+                <div class="lg:col-span-4 bg-gradient-to-b from-gray-50 to-gray-100 rounded-xl p-4 border border-gray-200 flex flex-col justify-between min-h-[220px] lg:min-h-[400px]">
+                    <div class="text-center font-bold text-xs bg-gray-200 text-gray-700 py-1 px-3 rounded-full self-center">
+                        整備工場・リフト横説明スペース
+                    </div>
+                    
+                    <div class="flex flex-col items-center my-auto" id="customer-container">
+                        <div id="story-avatar-container" class="w-28 h-28 md:w-36 md:h-36 bg-white rounded-full shadow-lg border-4 border-white flex items-center justify-center overflow-hidden">
+                            <!-- SVG Avatar will be injected here -->
+                        </div>
+                        <div class="mt-3 bg-gray-800 text-white font-extrabold px-4 py-1.5 rounded-full text-sm shadow-sm" id="story-customer-name">
+                            コバック太郎様
+                        </div>
+                        <span id="story-customer-tag" class="text-xs text-blue-600 mt-1 font-semibold bg-blue-50 px-2 py-0.5 rounded border border-blue-200">車検・整備のお客様</span>
+                    </div>
+
+                    <!-- Speech Bubble of customer -->
+                    <div class="bg-white border border-gray-300 p-3 rounded-xl shadow-md relative mt-4">
+                        <div class="absolute -top-2.5 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[8px] border-b-white"></div>
+                        <p id="story-bubble-text" class="text-xs md:text-sm text-gray-800 font-medium text-center italic">「車の調子はどうだった？」</p>
+                    </div>
+                </div>
+
+                <!-- Action / Choices Panel -->
+                <div class="lg:col-span-8 flex flex-col justify-between bg-white rounded-xl shadow-lg p-5 border border-gray-100">
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center space-x-2 text-xs font-bold text-gray-400 uppercase tracking-wider">
+                            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+                            <span>現在のミッション</span>
+                        </div>
+                        <h4 id="story-mission-text" class="text-sm md:text-base font-bold text-gray-800 leading-snug">
+                            ミッションテキストがここに入ります。
+                        </h4>
+                        <div class="p-3 bg-blue-50 text-blue-900 border border-blue-100 rounded-lg text-xs leading-relaxed" id="story-hint-box">
+                            <strong>💡 ミックのアドバイス:</strong> ヒントがここに入ります。
+                        </div>
+                    </div>
+
+                    <!-- Brainstorming Zone (First state) -->
+                    <div id="story-prep-area" class="p-6 bg-amber-50 border border-amber-200 rounded-xl text-center space-y-4">
+                        <p class="text-sm font-bold text-amber-800">
+                            <i class="fa-solid fa-lightbulb mr-1 animate-bounce"></i> アクティブラーニング実践中！
+                        </p>
+                        <p class="text-xs md:text-sm text-gray-700 leading-relaxed">
+                            上記の状況に対して、<strong>整備士のプロフェッショナルとして自然に気づきを与え、フロントにトス（トスアップ）するためのトークは？</strong><br>
+                            まずは自分の頭の中で具体的な案内トークを組み立ててみましょう！
+                        </p>
+                        <button onclick="showStoryChoices()" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl shadow-md transition-all text-xs md:text-sm inline-flex items-center space-x-2">
+                            <span>自分の答えをイメージした！選択肢を表示する</span>
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <!-- Choices Area (Initially Hidden) -->
+                    <div id="story-options" class="hidden space-y-3">
+                        <!-- Choice buttons dynamically added -->
+                    </div>
+
+                    <!-- Feedback Area (Hidden until a choice is clicked) -->
+                    <div id="story-feedback" class="hidden space-y-4 p-4 rounded-xl border transition-all duration-300">
+                        <div class="flex items-start space-x-3">
+                            <div id="feedback-icon" class="text-2xl mt-0.5"></div>
+                            <div class="flex-grow space-y-1">
+                                <h5 id="feedback-title" class="font-extrabold text-sm md:text-base text-gray-900">評価</h5>
+                                <p id="feedback-desc" class="text-xs md:text-sm text-gray-700 leading-relaxed">フィードバック説明が入ります。</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <button id="btn-next-step" onclick="nextStoryStep()" class="px-5 py-2.5 bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-lg shadow text-xs md:text-sm flex items-center space-x-2">
+                                <span id="btn-next-text">次へ進む</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== QUIZ MODE (NO TIMEOUT) ==================== -->
+        <section id="screen-quiz" class="hidden flex-grow flex flex-col space-y-4 animate-fade-in">
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-wrap justify-between items-center gap-4">
+                <div class="flex items-center space-x-3">
+                    <button onclick="goHome()" class="text-gray-500 hover:text-gray-700 p-1"><i class="fa-solid fa-arrow-left text-lg"></i></button>
+                    <div>
+                        <span class="text-xs font-bold bg-blue-100 text-blue-700 px-2.5 py-0.5 rounded-full">知識定着セッション</span>
+                        <h3 class="font-black text-gray-800 text-sm md:text-base mt-1">ニーズ喚起クイズ</h3>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="text-right">
+                        <span class="text-xs text-gray-500 block">問題進行度</span>
+                        <span id="quiz-progress" class="font-black text-gray-700 text-sm md:text-base">1 / 10 問</span>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-gray-500 block">正解数</span>
+                        <span id="quiz-score" class="font-black text-green-600 text-sm md:text-base">0 / 10</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Main Card -->
+            <div class="bg-white rounded-xl shadow-lg border border-gray-100 p-6 flex flex-col justify-between flex-grow">
+                <div class="space-y-6">
+                    <!-- Progress Information instead of timer -->
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-xs font-bold text-gray-500">
+                            <span>焦らずじっくり、メカニックとして最適なトスアップの選択肢を選びましょう！</span>
+                            <span class="text-blue-600 font-black"><i class="fa-solid fa-mug-hot mr-1"></i>じっくり学習モード</span>
+                        </div>
+                        <div class="w-full bg-gray-100 h-2.5 rounded-full overflow-hidden">
+                            <div id="quiz-progress-bar" class="bg-blue-500 h-full transition-all duration-300" style="width: 10%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl space-y-1">
+                        <span class="text-xs font-bold text-blue-600 block"><i class="fa-solid fa-wrench mr-1"></i>QUESTION</span>
+                        <p id="quiz-question-text" class="text-sm md:text-base font-bold text-gray-800 leading-relaxed">
+                            問題文がここに入ります。
+                        </p>
+                    </div>
+
+                    <!-- Options list -->
+                    <div id="quiz-options-container" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <!-- Dynamic buttons for quiz choices -->
+                    </div>
+                </div>
+
+                <!-- Quiz feedback area -->
+                <div id="quiz-feedback-box" class="hidden mt-6 p-4 rounded-xl border transition-all duration-300">
+                    <div class="flex items-start space-x-3">
+                        <div id="quiz-feedback-icon" class="text-3xl"></div>
+                        <div class="flex-grow space-y-1">
+                            <h4 id="quiz-feedback-title" class="font-black text-sm md:text-base">判定結果</h4>
+                            <div id="quiz-feedback-explanation" class="text-xs md:text-sm text-gray-700 leading-relaxed">解説文がここに入ります。</div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end mt-4">
+                        <button id="btn-quiz-next" onclick="nextQuizQuestion()" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow text-xs md:text-sm">
+                            次の問題へ進む
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== STUDY MANUAL SHEET ==================== -->
+        <section id="screen-sheet" class="hidden flex-grow flex flex-col space-y-4 animate-fade-in">
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <button onclick="goHome()" class="text-gray-500 hover:text-gray-700 p-1"><i class="fa-solid fa-arrow-left text-lg"></i></button>
+                    <div>
+                        <span class="text-xs font-bold bg-purple-100 text-purple-700 px-2.5 py-0.5 rounded-full">お役立ちマニュアル</span>
+                        <h3 class="font-black text-gray-800 text-sm md:text-base mt-1">メカニック専用トスアップ・マニュアル</h3>
+                    </div>
+                </div>
+                <button onclick="goHome()" class="text-xs font-bold text-blue-600 hover:underline">ホームに戻る</button>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 space-y-6 flex-grow">
+                <div class="flex flex-wrap border-b border-gray-200 gap-2">
+                    <button onclick="switchManualTab('tab-kobac')" id="btn-tab-kobac" class="px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-red-500 text-red-600 focus:outline-none">
+                        ⚙️ 点検整備×保険トスの狙い
+                    </button>
+                    <button onclick="switchManualTab('tab-talk')" id="btn-tab-talk" class="px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 focus:outline-none">
+                        🗣️ 整備説明から繋ぐ一言集
+                    </button>
+                    <button onclick="switchManualTab('tab-support')" id="btn-tab-support" class="px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 focus:outline-none">
+                        🤝 フロント・保険部への連携の型
+                    </button>
+                </div>
+
+                <!-- Tab Content 1 -->
+                <div id="tab-kobac" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gradient-to-br from-red-50 to-white p-5 rounded-xl border border-red-100 space-y-3">
+                            <h4 class="font-extrabold text-red-900 text-base md:text-lg flex items-center">
+                                <i class="fa-solid fa-wrench mr-2 text-red-600"></i>整備士が保険の最強キーパーソンである理由
+                            </h4>
+                            <p class="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                車の構造と物理的な状態を知り抜いているメカニックは、言葉一つ一つにプロとしての圧倒的な説得力があります。フロントよりも「お車の危険度（事故リスク）」に直接気づきを与えることが容易です。
+                            </p>
+                            <ul class="text-xs text-gray-600 space-y-2 list-disc list-inside">
+                                <li><strong>物理的根拠：</strong>「ドラレコ配線」「サビ」「傷」「タイヤ摩耗」をトリガーに、保険特約へ繋ぐため不快感がありません。</li>
+                                <li><strong>お客様ファースト：</strong>売り込む必要は全くなく、「不備があるからフロントで確かめてみては」と促す親切心が成約に結びつきます。</li>
+                                <li><strong>トスアップに徹する：</strong>面倒な料金計算、プラン構築、契約処理は一切不要。気づかせてフロントに引き継ぐ（トス）だけでOKです！</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-white p-5 rounded-xl border border-blue-100 space-y-3">
+                            <h4 class="font-extrabold text-blue-900 text-base md:text-lg flex items-center">
+                                <i class="fa-solid fa-circle-nodes mr-2 text-blue-500"></i>整備士からフロントへの情報バトン
+                            </h4>
+                            <p class="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                メカニックから投げられた気づきのタネは、店頭フロントでお引渡し時にアドバイスシートに開花します。
+                            </p>
+                            <div class="space-y-2">
+                                <div class="bg-white p-2.5 rounded-lg border border-blue-200 text-xs">
+                                    <strong class="text-blue-800">傷（自費）の鈑金入庫時：</strong><br>
+                                    エコノミー車両保険（免責10-20万円設定）を説明して、店頭お引渡し時に比較見積もりを出すようにパス！
+                                </div>
+                                <div class="bg-white p-2.5 rounded-lg border border-blue-200 text-xs">
+                                    <strong class="text-blue-800">ドラレコ取付確認：</strong><br>
+                                    事故現場で直接緊急オペレーターに繋がる最新通信型ドラレコをお引渡し時に提案できるよう、フロントに情報共有！
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content 2 -->
+                <div id="tab-talk" class="hidden space-y-6">
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-green-500 pl-4 py-2">
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">① ドラレコ取付確認・配線説明からのトスアップ</h4>
+                            <p class="text-xs text-gray-500 mt-1">目的：通信型ドラレコへの切り替えメリットに気づかせる</p>
+                            <div class="mt-2 bg-green-50 p-3 rounded-lg border border-green-200 text-xs md:text-sm text-green-900 italic font-medium leading-relaxed">
+                                「お車の点検で、お持ち込みいただいた市販のドラレコを動かしてチェックしました！録画はばっちりですが、最近は事故で大きなショックを受けたときに、自動で保険会社のオペレーターへ繋がり救急車を手配してくれる通信型のドラレコ特約がとても人気なんです。今の保険にセットできるか、出庫時にお調べしてお待ちしましょうか？」
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-yellow-500 pl-4 py-2">
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">② タイヤ劣化・パンク修理時のケガ（人傷）へのトスアップ</h4>
+                            <p class="text-xs text-gray-500 mt-1">目的：自損事故時の人身傷害補償の必要性を伝える</p>
+                            <div class="mt-2 bg-yellow-50 p-3 rounded-lg border border-yellow-200 text-xs md:text-sm text-yellow-900 italic font-medium leading-relaxed">
+                                「タイヤの溝がかなり減っており、雨の日のスリップなどの単独事故リスクが高くなっています。もちろん安全に新品交換しますが、最近は自損事故等でご自身やご家族がケガされた際に、100%全額をすぐに補償してくれる『人身傷害保険』の見直しも推奨しております。お引渡し時に今の保険内容と合致しているかフロントでお調べしますね！」
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-red-500 pl-4 py-2">
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">③ サビ・下回り、または傷説明時の「エコノミー車両保険」トスアップ</h4>
+                            <p class="text-xs text-gray-500 mt-1">目的：免責設定で安く入れる車両保険を知っていただく</p>
+                            <div class="mt-2 bg-red-50 p-3 rounded-lg border border-red-200 text-xs md:text-sm text-red-900 italic font-medium leading-relaxed">
+                                「下回りやお車に少し擦ったような傷が見られますね。自費ですとお見積もりは〇万円ですが、実は自動車保険を『相手限定（エコノミー）』にし、免責を10万円等に設定すると、毎月のご負担を最小限に抑えながら台風などの水災によるお車の水没などに手厚く備えられますよ。一度、フロントでシミュレーションを作って出庫時にお見せしましょうか？」
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content 3 -->
+                <div id="tab-support" class="hidden space-y-4">
+                    <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-3">
+                        <h4 class="font-bold text-gray-800 text-sm md:text-base">プロメカニックの「引き際（トスアップ）」の基本型</h4>
+                        <p class="text-xs md:text-sm text-gray-700 leading-relaxed">
+                            メカニックの役割は<b>「お客様に保険のメリットや重要性に気づいていただく一言を投げかけ、承諾を得てフロントや保険部（本部）に繋ぐ」</b>ところまでです。詳細なお手続きや見積作成の手間は一切発生しません！
+                        </p>
+                        
+                        <div class="relative pl-6 border-l-2 border-blue-500 space-y-6 mt-4">
+                            <div class="relative">
+                                <div class="absolute -left-8 top-0 bg-blue-500 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold">1</div>
+                                <h5 class="font-bold text-gray-800 text-xs md:text-sm">整備説明のなかで自然に切り出す</h5>
+                                <p class="text-xs text-gray-500 mt-0.5">お車の消耗パーツや傷の説明をプロとしての正確な目で説明し、それに関連する保険特約（ドラレコ、人傷、車両等）について疑問形（～ってついていますか？）で問いかけます。</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-8 top-0 bg-blue-500 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold">2</div>
+                                <h5 class="font-bold text-gray-800 text-xs md:text-sm">お調べ（提案準備）の了承をいただく</h5>
+                                <p class="text-xs text-gray-500 mt-0.5">「出庫時（納車時）にフロントでお調べして、お役立ち資料を用意してお待ちしてもよろしいですか？」と伝え、お客様の承諾を得ます。</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-8 top-0 bg-blue-500 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold">3</div>
+                                <h5 class="font-bold text-gray-800 text-xs md:text-sm">フロントスタッフ（または保険部）へトスアップ</h5>
+                                <p class="text-xs text-gray-500 mt-0.5">お預かりした証券コピー、またはヒアリングした気づきのタネ（例：ドラレコに興味あり）をkintoneや店舗引継ぎ用紙などでフロントチームへ確実に送信！</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-8 top-0 bg-blue-500 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold">4</div>
+                                <h5 class="font-bold text-gray-800 text-xs md:text-sm">お引渡し時にフロントが刈り取り</h5>
+                                <p class="text-xs text-gray-500 mt-0.5">フロントスタッフが、出来上がったアドバイスシートを使用して、お車の整備結果のお引渡し時と同時に、ピッタリの保険提案と契約手続きを行います。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TRAINING RESULT SCREEN ==================== -->
+        <section id="screen-result" class="hidden flex-grow flex flex-col justify-center items-center my-auto py-8 animate-fade-in">
+            <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full border border-gray-100 text-center space-y-6">
+                <div class="w-20 h-20 bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center text-3xl mx-auto shadow-inner animate-bounce">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-xl md:text-2xl font-black text-gray-900">トレーニング完了！</h3>
+                    <p id="result-mode-desc" class="text-xs text-gray-500">お疲れ様でした！</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <span class="text-xs text-gray-500 block font-bold">あなたの最終成績</span>
+                    <span id="result-score-text" class="text-3xl font-black text-red-600">85 点</span>
+                    <p id="result-rank" class="text-xs md:text-sm font-bold text-gray-700 mt-2">優秀なジュニアアドバイザー</p>
+                </div>
+                <p id="result-comment" class="text-xs md:text-sm text-gray-600 leading-relaxed px-2">
+                    アドバイスコメントが入ります。
+                </p>
+                <div class="pt-4 flex flex-col space-y-2">
+                    <button onclick="goHome()" class="w-full py-3 bg-gray-900 text-white font-bold rounded-xl shadow hover:bg-gray-800 transition text-xs md:text-sm">
+                        メニューに戻る
+                    </button>
+                    <button id="btn-retry-mode" onclick="retryMode()" class="w-full py-3 bg-white text-gray-700 border border-gray-300 font-bold rounded-xl shadow hover:bg-gray-100 transition text-xs md:text-sm">
+                        もう一度挑戦する
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400 py-4 border-t border-slate-700">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs">
+            <p>© 2026 MIC Group. All Rights Reserved. (車検のコバック×ミック保険部)</p>
+            <div class="flex space-x-4">
+                <span>連携インフラ: kintone / Notion / Looker Studio</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript Logic -->
+    <script>
+        // Global State Variables
+        let currentMode = ''; 
+        let currentStoryIndex = 0;
+        let storyScore = 0;
+        let storyMood = 50; 
+        
+        let currentQuizIndex = 0;
+        let quizCorrectCount = 0;
+
+        // --- STORY DATA (Simulation: 10 Chapters for Mechanics) ---
+        const storyChapters = [
+            {
+                chapter: "第1章",
+                title: "ドラレコ作動確認からのトスアップ",
+                mission: "お車の車検整備中、お客様持ち込みのドライブレコーダーの作動状況を点検しました。お車の引渡し説明のなかで、保険会社の通信型ドラレコを紹介してトスアップするトークを選びましょう。",
+                hint: "自費のドラレコを否定せず、保険会社の『緊急時自動オペレーター接続（命を守る機能）』の圧倒的安心感を伝えてフロントへパスします。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "車検・一般整備のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="38" r="2.5" fill="black"/><circle cx="58" cy="38" r="2.5" fill="black"/><path d="M44,48 Q50,44 56,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「持ち込んだドラレコの録画テスト、大丈夫だった？前の車から移植した古いドラレコだからちょっと不安なんだよね」"
+                },
+                choices: [
+                    {
+                        text: "A: 「バッチリ録画できていますが、そのドラレコはかなり古くて画質も悪く、事故のときに役に立たない可能性が高いので、今すぐ廃棄して当社の高額なナビに変えましょう！」",
+                        score: 30,
+                        mood: -15,
+                        feedbackTitle: "⚠️ プロとして決めつけと否定的な言動は厳禁 (NG)",
+                        feedbackDesc: "せっかくお車にドラレコを付けて安全意識が高いお客様に対して、「役に立たない」「廃棄」などとネガティブな発言をすると強い反発を招きます。良さを認めてプラスアルファをアピールします。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "B: 「バッチリ作動していますよ。また調子が悪くなったら言ってくださいね」",
+                        score: 50,
+                        mood: 5,
+                        feedbackTitle: "🤔 悪くありませんが、提案機会（トスアップ）の損失です (微妙)",
+                        feedbackDesc: "点検結果だけを伝え、そのまま引き下がってはお客様のトスアップに繋がりません。通信型ドラレコという優れた特約への気づきを与える機会を逸しています。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "C: 「録画確認は完璧です！安全のために素晴らしいですね。実は、最近の自動車保険には『強い衝撃を受けると自動で救急車の手配をしてくれる通信型ドラレコ特約』があり、命を守る安全機能として大変人気なんです。今ご加入の保険に月850円ほどでセットできるか、出庫時にお調べしてお待ちしてもよろしいですか？」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！お客様を安心へ導くメカニックのスマートトス！ (BEST)",
+                        feedbackDesc: "素晴らしい！市販ドラレコの動作を褒めつつ、保険会社専用ドラレコの最大価値（衝撃時の自動通報・救命機能）をプロの安全点検の一環として説明し、「出庫時にフロントでお調べしてお待ちする」という完璧なトスアップができています。",
+                        icon: "✅"
+                    }
+                ]
+            },
+            {
+                chapter: "第2章",
+                title: "タイヤ交換時の「自損事故のケガ（人傷）」トスアップ",
+                mission: "タイヤの摩耗状態を説明し、安全に新品交換していただくことになりました。このお話から、もしもの単独事故のケガを守る「人身傷害保険」の確認へ繋ぎましょう。",
+                hint: "タイヤ摩耗による「スリップ自損事故」のリスクから、ご自身やご家族のケガを全額カバーしてくれる人身傷害保険の重要性を投げかけます。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "タイヤ点検・交換のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="36" r="2.5" fill="black"/><circle cx="58" cy="36" r="2.5" fill="black"/><path d="M42,48 Q50,52 58,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「タイヤのスリップサインってのが出ているのか。分かった、安全のためにタイヤを4本とも新しく交換してくれ！」"
+                },
+                choices: [
+                    {
+                        text: "A: 「ありがとうございます！タイヤを新しくしたので、これで絶対に事故は起こりませんよ！もう任意保険も解約して大丈夫なくらい完璧な安全状態です！」",
+                        score: 20,
+                        mood: -10,
+                        feedbackTitle: "⚠️ 虚偽のアドバイス、プロとして不適格 (NG)",
+                        feedbackDesc: "タイヤを新品にしても事故が起きる可能性は無くなりません。ましてや任意保険の解約を勧めるなど、アドバイザーとしてあってはならない重大な発言ミスです。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "B: 「ありがとうございます。タイヤを新品にされたので雨の日のスリップ等の心配は大幅に減りましたね。ただ、万が一ご自身で電柱等にぶつかるなどの自損事故があった際、治療費を100%全額すぐにカバーする『人身傷害保険』の内容がバッチリかどうか、出庫時にお調べしてお待ちしてもよろしいですか？」",
+                        score: 100,
+                        mood: 30,
+                        feedbackTitle: "✨ 素晴らしい！タイヤ交換から「ケガ補償」への見事な導線！ (BEST)",
+                        feedbackDesc: "お見事です！『タイヤ交換＝スリップ事故対策』の話題から、万が一の単独事故でのケガの補償（人身傷害）の有無を確認する、メカニックならではの極めて論理的で親身なトスアップができています。",
+                        icon: "✅"
+                    },
+                    {
+                        text: "C: 「ありがとうございます。ではタイヤ4本をすぐにピットで組み替えておきますね。」（保険の話は一切しない）",
+                        score: 50,
+                        mood: 5,
+                        feedbackTitle: "🤔 通常業務としては良いが、トスアップはゼロ (微妙)",
+                        feedbackDesc: "整備士としての通常作業としては全く問題ありませんが、お客様の万が一の保険の見落としを防ぐミックのアドバイザーとしては、トスアップのチャンスを逃しています。",
+                        icon: "🔺"
+                    }
+                ]
+            },
+            {
+                chapter: "第3章",
+                title: "ブレーキパッド摩耗から「自動ブレーキ（ASV）割引」の確認",
+                mission: "ブレーキの点検結果を説明しています。お車の安全装置（衝突被害軽減ブレーキ）に関連して、自動車保険に「安全装置割引」が正しく適用されているか確認を促しましょう。",
+                hint: "自動ブレーキ付きのお車でも、新車登録から3年を過ぎるとASV（安全装置）割引の対象外となります。その内容が保険にどう適用されているかをフロントへ繋ぎます。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "ブレーキ点検中のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#374151"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="38" r="2.5" fill="black"/><circle cx="58" cy="38" r="2.5" fill="black"/><path d="M44,46 L56,46" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「ブレーキ周りの点検、ブレーキパッドとか自動ブレーキシステムは異常なかったかい？」"
+                },
+                choices: [
+                    {
+                        text: "A: 「異常ありません。自動ブレーキもばっちり作動していますので安心ですよ。自動ブレーキ付きはいいですよね」",
+                        score: 50,
+                        mood: 10,
+                        feedbackTitle: "🤔 良い整備説明ですが、トスアップはしていません (微妙)",
+                        feedbackDesc: "安心感を与える説明は素晴らしいですが、中堅・実戦アドバイザーとして「お車の安全装置＝保険料割引の適否」へと視点を広げ、さらにメリットを深掘りするパスを投げたいところです。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "B: 「どちらもバッチリです！ただ、自動ブレーキ（ASV）付きのお車は、新車登録から3年以内であれば自動車保険に約9%の『安全装置割引』が効くのですが、3年を過ぎると対象外になる仕組みなんです。○○様のお車はちょうど4年目ですので、内容が正しく変更されているか、今回の出庫時にフロントスタッフに確認させてもよろしいですか？」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 驚きの気づき！お車の仕様と保険の専門的トスアップ！ (BEST)",
+                        feedbackDesc: "これはプロフェッショナルです！お車の安全機能（ASV）と、保険上の『新車登録後3年以内』というルールを的確に結びつけ、お客様にプロとしての重要な気づきを与えています。「フロントで調べます」という引き際もスマートです。",
+                        icon: "✅"
+                    },
+                    {
+                        text: "C: 「ブレーキは大丈夫ですが、自動ブレーキはよく誤作動して事故を起こしますから、保険料も高くなるんですよ！」",
+                        score: 20,
+                        mood: -20,
+                        feedbackTitle: "⚠️ 誤った説明と不適切な態度 (NG)",
+                        feedbackDesc: "安全装置の誤作動を大袈裟に吹聴して不安を煽るような言動は、お客様を驚かせるだけで信頼関係を破壊します。保険料も、基本的にはASV装着車の方が割引が効くため、事実とは異なります。",
+                        icon: "❌"
+                    }
+                ]
+            },
+            {
+                chapter: "第4章",
+                title: "下回りの損傷と「車両保険（エコノミー）」の掛け方トス",
+                mission: "下回りや外観の損傷を発見。お客様に修理費用を説明するなかで、相手限定（エコノミー）や免責設定を使った「賢い車両保険」の話題を出し、フロントへトスアップしましょう。",
+                hint: "「車両保険は高くてセットしていない」というお客様。実は車対車限定（エコノミー）＋免責調整で、台風やゲリラ豪雨での「お車の水没災害」等に安く備えられる賢い掛け方をフロントからお見せできるよう了承（トス）をいただきます。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "下回り・サビ点検のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="36" r="2.5" fill="black"/><circle cx="58" cy="36" r="2.5" fill="black"/><path d="M44,48 Q50,44 56,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「リフトに載せている車の下の方に、擦り傷があるね...。車両保険は高くて入ってないし、こういう傷の修理は自費で我慢するしかないかな」"
+                },
+                choices: [
+                    {
+                        text: "A: 「そうですね、車両保険は高級車しか入りませんから不要です！この傷はサビ止めスプレーだけ塗って今回は我慢しましょう！」",
+                        score: 30,
+                        mood: -10,
+                        feedbackTitle: "⚠️ プロとしてのアドバイスになっていません (NG)",
+                        feedbackDesc: "車両保険は高額だから不要、と整備士が思い込んでお勧めを放棄するのは正しくありません。お客様は、台風の水没災害などで車が全損したときの恐怖を抱えている可能性があります。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "B: 「傷の修理は当店で安くできます。ただ、車両保険を『相手限定（エコノミー）』にしつつ、免責（自己負担）を10万円等に設定すると、毎月の出費を非常に安く抑えながら、最近多発しているゲリラ豪雨などの水没災害でお車が完全に壊れたときなど、高額なもしもにしっかり備えられる掛け方があります。一度、出庫時にフロントから設計案をお渡ししてもよろしいですか？」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！メカニックからのお役立ちトスアップ！ (BEST)",
+                        feedbackDesc: "素晴らしい！傷の説明から「車両保険を最も安く、かつ重大な災害（水災など）に備えるためのエコノミー＋免責10万円設定の掛け方」を提示できています。整備の視点からこれほど説得力のある解説ができるのは、お客様の絶大な安心につながります。",
+                        icon: "✅"
+                    },
+                    {
+                        text: "C: 「自費でしたら修理代は10万円かかります！車両保険に入っていないご自身の責任ですので、この場でクレジットカードでお支払いください！」",
+                        score: 20,
+                        mood: -20,
+                        feedbackTitle: "⚠️ 脅迫のような不適切な案内 (NG)",
+                        feedbackDesc: "高額な修理代金の支払いを一方的に迫るような態度は、お客様を著しく困惑させ、店舗への信用を完全に無くします。お客様に寄り添った保険メリットのトスアップを優先します。",
+                        icon: "❌"
+                    }
+                ]
+            },
+            {
+                chapter: "第5章",
+                title: "鈑金見積もり提示時の「新車（新価）特約」トス",
+                mission: "自費での傷の修理見積もり（鈑金見積もり）をお渡ししています。万が一の大きな事故の際に、中途半端な修理ではなく『新車に買い替えられる特別な特約』があることをお知らせし、フロントへ繋ぎましょう。",
+                hint: "初度登録から数年以内であれば「車両新価特約（新車特約）」をセットすることで、時価額を超えて新車に乗り換えられる特約が加入可能。お引渡し時にフロントから詳しいお話ができるようにします。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "鈑金修理・お見積もり提示のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="36" r="2.5" fill="black"/><circle cx="58" cy="36" r="2.5" fill="black"/><path d="M44,48 L56,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「まだ買って2年だからね。今回の傷の自費修理費は少し高く感じるけど...もしもっと大きな事故をしたら、いくら修理しても事故車になっちゃうから、その時は大変だよね」"
+                },
+                choices: [
+                    {
+                        text: "A: 「大事故に遭われたときは、いくらフレームを修正しても二度と元通りの安全性は得られませんので、もう廃車にして新車を買い直すしかないですよ！」",
+                        score: 35,
+                        mood: -15,
+                        feedbackTitle: "⚠️ 不安を過剰に煽り、解決策がありません (NG)",
+                        feedbackDesc: "重大な事故のリスクに対してただ脅すだけでなく、お車を安全かつ損をせずに復活（または買い替え）させるための、自動車保険の「特約」についてお話しします。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "B: 「それでしたら、事故をしないようにくれぐれもお気をつけください。安全運転用のグッズをおススメします！」",
+                        score: 45,
+                        mood: 5,
+                        feedbackTitle: "🤔 安全運転の注意だけではアプローチとして不十分 (微妙)",
+                        feedbackDesc: "安全意識の共有は良いことですが、特約メリットの説明へ繋げられていません。新価特約のメリットをお伝えしましょう。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "C: 「まだご購入から2年とのこと、実は車両保険に『車両新価（新車）特約』がセットされていると、万が一大きな事故で修理費用が車両価格の50%以上になった場合、お車の修理を繰り返すのではなく『新車そのものを購入し直す費用』が満額カバーされる仕組みなんです。現在ご加入の保険についているか、今回の出庫時にフロントスタッフにお調べさせてもよろしいですか？」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！お客様の「新車への愛着」に寄り添うトスアップ！ (BEST)",
+                        feedbackDesc: "お見事！お車購入から2年（初度登録5年以内など）という条件を考慮し、お客様の『新車へのこだわりや、大事故時の不安』に対して完璧に適合する「車両新価特約（新車特約）」を、整備士の目線から非常に高い納得感で提示してフロントにパスできています。",
+                        icon: "✅"
+                    }
+                ]
+            },
+            {
+                chapter: "第6章",
+                title: "バッテリー点検と「ミックロードサービス（一元サポート）」トス",
+                mission: "バッテリーが寿命に近く、電圧低下が見られます。交換をお勧めするのと同時に、もしものお出かけ先でのトラブルを想定し、「ミック（コバック）の自動車保険に付帯するレッカーサービス」の優位性を伝えてフロントへトスアップしましょう。",
+                hint: "バッテリーの寿命を説明。ミックでお引き受けしている保険なら、突然のバッテリー上がりや故障での移動について「お電話一本で無料レッカー搬入、自社で代車も即納可能」という圧倒的な一元対応を伝えます。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "バッテリー点検中のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="38" r="2.5" fill="black"/><circle cx="58" cy="38" r="2.5" fill="black"/><path d="M42,48 Q50,52 58,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「バッテリー、まだ全然使えるでしょ？今度旅行に行く計画をしてるんだけど、問題ないよね？」"
+                },
+                choices: [
+                    {
+                        text: "A: 「このままだと、間違いなくお出かけ先で完全にバッテリーが上がってパニックになりますよ。今すぐ高額なバッテリーに交換して、さらにポータブル電源も購入しましょう！」",
+                        score: 30,
+                        mood: -15,
+                        feedbackTitle: "⚠️ 脅し売りになり、信頼を損ねます (NG)",
+                        feedbackDesc: "バッテリーが劣化しているのは事実ですが、交換のメリットだけでなく、旅先での突然のトラブル（事故・故障）発生時に対する、ミックならではの「ロードサービス＆レッカー」の心強さについて触れてトスアップしましょう。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "B: 「問題ありませんが、気になるなら一応交換をお勧めします。」",
+                        score: 50,
+                        mood: 5,
+                        feedbackTitle: "🤔 バッテリー上がりのリスクと保険サービスに繋がっていません (微妙)",
+                        feedbackDesc: "劣化しているのに問題ないと言うのはメカニックとして誤りであり、万が一本当に旅先で不動になった際、お客様は深刻なパニックに陥ります。プロの言葉で気づきを与えます。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "C: 「テスターの結果、電圧がかなり低下しており、旅先での突然のバッテリー上がりの危険が高い状態です。安全のために交換をお勧めしますが、万が一の時にコバックでお引受けしている保険なら『お電話一本』で、全国どこからでも無料レッカーを繋ぎ、ご移動用の代車もすぐに手配できます。このようなロードサービスが他社様より心強いか、出庫時にフロントからお話をご案内させていただいてよろしいですか？」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！「車の状態」から「ロードサービス一元対応」への最速トス！ (BEST)",
+                        feedbackDesc: "素晴らしい！『バッテリー電圧の低下＝旅先でのトラブル』を論理的に結びつけ、ミック独自の一元事故・故障ロードサービス（お電話一本でレッカーから代車、自社入庫まで一括対応）の強みを整備説明に組み込んでフロントへパスできています。",
+                        icon: "✅"
+                    }
+                ]
+            },
+            {
+                chapter: "第7章",
+                title: "2台目オイル交換時の「家族特約の重複排除」トス",
+                mission: "ご家族でお乗りの「2台目（セカンドカー）」のオイル交換でご来店。お車のオイル状態を説明しながら、ご家族全体での特約の重複（無駄払い）について気づきを与え、フロントにトスしましょう。",
+                hint: "「ご家族で車を2台以上お持ちの場合、弁護士特約やファミリーバイク特約などが複数台に重複して付帯され、毎年無駄な保険料を払っている」可能性が高いことをトスアップします。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "2台目のオイル交換・点検中のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="36" r="2.5" fill="black"/><circle cx="58" cy="36" r="2.5" fill="black"/><path d="M44,48 Q50,44 56,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「今回の車は奥さんの通勤用なんだよね。コバックさんはオイル交換が安くて本当に助かるよ」"
+                },
+                choices: [
+                    {
+                        text: "A: 「ありがとうございます！ではオイルが綺麗になりましたので、そのまま気を付けてお帰りくださいね！」",
+                        score: 50,
+                        mood: 10,
+                        feedbackTitle: "🤔 単純なオイル交換だけで終了（トスアップゼロ） (微妙)",
+                        feedbackDesc: "整備としては問題ありませんが、ご家族で複数台を所有されているお客様は、最も『特約の重複（無駄）』や『管理の一元化』の恩恵を受けやすい大切な対象です。一言添えましょう。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "B: 「ご家族で2台以上お持ちなんですね！自動車保険は重複していると毎年何万円も大損しますから、早く両方解約して当店の保険に全部入れ替えちゃいましょう！」",
+                        score: 30,
+                        mood: -15,
+                        feedbackTitle: "⚠️ 売り込みが強すぎて不信感を与えます (NG)",
+                        feedbackDesc: "まだお客様は自分の保険が重複している確証もありません。急に他社の全解約を迫るようなアプローチは、脅し売りと受け取られて拒絶されます。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "C: 「ご利用ありがとうございます！実はご家族で2台以上お車をお持ちの場合、奥様のお車と○○様のお車に『弁護士特約』などが別々についており、毎年不要な保険料を無駄にされているケースが多発しているんです。この無駄を省ける状態か、今回お引渡しの間に、フロントスタッフに一度チェックさせてもよろしいですか？」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 見事なトスアップ！複数台ファミリーへの「お役立ち」 (BEST)",
+                        feedbackDesc: "素晴らしい！『奥様の通勤車＝ご家族で複数台所有』という状況を瞬時に判断し、マニュアルにある「特約の重複（弁護士費用特約など）」を、お客様のためになる「無駄の削減」として提案し、スムーズにフロントへ引き継げています。",
+                        icon: "✅"
+                    }
+                ]
+            },
+            {
+                chapter: "第8章",
+                title: "飛び石でのフロントガラス修理と「1等級ダウン事故」トス",
+                mission: "飛び石によってフロントガラスにヒビが入ってしまい、修理見積もりをご相談のお客様。「保険を使うべきか自費か」悩んでおられます。プロメカニックとして、フロントガラス修理の保険知識（1等級ダウン等）を添えてトスしましょう。",
+                hint: "飛び石によるガラス損傷は自損事故ではなく『1等級ダウン事故』扱いになり、車両保険で損なく直せるケースがあります。フロントから詳しい差額シミュレーションができるように繋ぎます。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "フロントガラス傷相談のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#374151"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="38" r="2.5" fill="black"/><circle cx="58" cy="38" r="2.5" fill="black"/><path d="M44,46 Q50,50 56,46" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「高速道路で前を走っていたダンプカーから石が飛んできてさ...。ガラスの交換って自費だとすごく高くなりそうで不安なんだけど、保険を使うと3等級も下がっちゃうんでしょ？」"
+                },
+                choices: [
+                    {
+                        text: "A: 「ガラス交換はだいたい15万円から20万円かかります！保険を使うと大損しますので、今回は貯金を崩して自費でお支払いください！」",
+                        score: 30,
+                        mood: -15,
+                        feedbackTitle: "⚠️ 誤った保険知識と一方的な支払いの要求 (NG)",
+                        feedbackDesc: "他物の飛来である「飛び石」は3等級ダウン事故ではありません。誤った知識でお客様を絶望させるのではなく、正しい仕組みをお伝えして安心感を与えるのがプロです。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "B: 「はい、ガラス修理の見積もりを安く出しておきますので、それを見てご自身で決めてくださいね」",
+                        score: 55,
+                        mood: 5,
+                        feedbackTitle: "🤔 不親切であり、トスアップのチャンスを逃しています (微妙)",
+                        feedbackDesc: "見積書をお渡しするだけでは不親切です。飛び石による保険金の支払規則を教えることが、当店の自動車保険にお任せいただく最高の信頼づくりのタネになります。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "C: 「それは大変でしたね...。おケガはなくて本当に何よりです。実は飛び石によるガラス交換は、通常の3等級ダウンではなく『1等級ダウン（かつ事故有1年）』として、保険を賢く適用してご自費を大幅に浮かせられる可能性が高いんです。お見積もりと一緒に、今回の事故有による上昇保険料との『差額シミュレーション』をフロントスタッフにご用意させてもよろしいですか？」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！プロならではの1等級ダウン知識と親身なトスアップ！ (BEST)",
+                        feedbackDesc: "素晴らしい！『飛び石＝1等級ダウン事故（飛来中・落下中の他物との衝突）』という専門知識を的確に説明し、大きな出費に怯えるお客様に安心を提供しています。フロントで上昇保険料とガラス代の差額計算シートを用意するよう、完全にトスアップできています。",
+                        icon: "✅"
+                    }
+                ]
+            },
+            {
+                chapter: "第9章",
+                title: "車検時「自賠責保険のみ」のお客様へのアプローチトス",
+                mission: "車検整備を進めながら、自賠責保険しか加入していない（無保険）というお客様に対し、整備のプロの視点から、任意保険なしでお車を走らせることの致命的危険性を伝え、フロントへ繋ぎましょう。",
+                hint: "「車はいつ事故を起こすか、スリップなどのスリップ自損や他人の車の修理、ご自身のケガは自賠責（傷害120万円等）では1円も出ない」ことを整備士の言葉で訴え、フロントに引き継ぎます。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "任意保険未加入のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="36" r="2.5" fill="black"/><circle cx="58" cy="36" r="2.5" fill="black"/><path d="M44,48 Q50,44 56,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「車検で自賠責保険のお金を払うから、保険はこれで十分なんだよね。もう1つの任意保険なんて、贅沢品でしょ？」"
+                },
+                choices: [
+                    {
+                        text: "A: 「自賠責だけで乗っていると、人身事故を起こしたときに一瞬で人生が破滅します！警察にも捕まりますよ！」",
+                        score: 30,
+                        mood: -20,
+                        feedbackTitle: "⚠️ 恐怖を煽るだけで、自賠責と任意の法律関係も誤っています (NG)",
+                        feedbackDesc: "任意保険はあくまで『任意』であり、自賠責だけでお車を運転しても直ちに道路交通法上の違法（警察に逮捕）にはなりません。事実に反する脅迫めいたトークは反発を招きます。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "B: 「自賠責保険はあくまで、被害者の方のおケガに対する国が定めた『最低限（傷害120万/死亡3000万）』の補償ですので、相手の車、電柱などの物、そして○○様ご自身や同乗されるご家族のケガは『完全に1円も支払われません』。もし万が一に備え、お引渡し時にフロントから、月々最低限の保険料で家族全員を完全に守れる『お守りプラン』をご用意させていただいてよろしいですか？」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ お見事！未加入のお客様の「安心」を守るプロトス！ (BEST)",
+                        feedbackDesc: "素晴らしい！自賠責保険の限界（他人物損や自分のケガは対象外、傷害の上限は120万円等）を事実として明瞭に説明し、コバックの使命感として「お引渡し時にフロントからお守りプラン（見積書）を用意する」と、完璧にトスアップができています。",
+                        icon: "✅"
+                    },
+                    {
+                        text: "C: 「分かりました。では車検自賠責だけで進めます。事故があったら自己負担ですので覚悟してくださいね」",
+                        score: 35,
+                        mood: 5,
+                        feedbackTitle: "⚠️ プロアドバイザーとして説得をあきらめています (NG)",
+                        feedbackDesc: "未加入のお客様を、危険を説明せずそのまま無保険状態で店舗から出してしまうことは、コバック・ミックのポリシー（お客さまの万が一をお守りする）に完全に反します。必ずトスアップを試みます。",
+                        icon: "🔺"
+                    }
+                ]
+            },
+            {
+                chapter: "第10章",
+                title: "整備お引渡し時の「日常点検と生命保険クロスセル」トス",
+                mission: "お車の車検整備（エンジン、オイル、バッテリーなど）がバッチリ安全状態であることをお伝えした後に、ご家族の『体の健康診断（生命保険クロスセル）』へ繋げるフックトークを実践しましょう。",
+                hint: "「お車の健康診断（車検点検）が完了した」という切り口から、「実はコバックでは、ご家族のお体に関するもしもの備え（生命保険の無料健康診断）も行っております」とトスアップします。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "車検・納車完了時のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="36" r="2.5" fill="black"/><circle cx="58" cy="36" r="2.5" fill="black"/><path d="M42,48 Q50,52 58,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「車検も点検も全部やってくれてありがとう！これでまた2年間、この車に安心して乗れるよ！」"
+                },
+                choices: [
+                    {
+                        text: "A: 「ありがとうございます。車は大丈夫ですので、次はご自身のがん保険や医療保険も当社の売り上げのためにぜひお任せください！」",
+                        score: 20,
+                        mood: -20,
+                        feedbackTitle: "⚠️ 売り上げ目的を出すのは禁物 (NG)",
+                        feedbackDesc: "お客様のお役立ちではなく、会社の売り上げのために生保をお勧めすると、お車を一生懸命整備して築き上げたプロの信頼がすべて一瞬で崩れ去ります。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "B: 「バッチリです！お気をつけて、何かあったらいつでも呼んでくださいね！」（そのままお見送りして終了）",
+                        score: 50,
+                        mood: 10,
+                        feedbackTitle: "🤔 整備士としては合格ですが、トスアップはしていません (微妙)",
+                        feedbackDesc: "お車単体で見送るのには問題ありませんが、お客様を「トータルでお守りする」ために、当店の優秀な生命保険専任パートナーへバトンを繋ぐチャンスを失っています。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "C: 「ありがとうございます！お車の『健康診断（車検整備）』がバッチリ終わりましたので、私どもも本当に安心です。実は、コバックでは車の安全のほかに、ご家族皆様の『お体に関するもしもの健康診断（生命保険の無駄診断）』も無料で行っております。色々なお悩み窓口を当店へ一本化できますので、もしよろしければ、この後の精算時の間に、当店の生保専門スタッフによる5分だけの無料相談をフロントで繋がせていただいてよろしいでしょうか？」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！お車の健康からお体の健康へのプロトスアップ！ (BEST)",
+                        feedbackDesc: "お見事！『お車の健康診断（車検整備）が無事終わった安心感』から、極めて自然に『お体の健康診断（生命保険の見直し診断）』へと繋ぎ、店舗の生命保険専任パートナーへバトンを繋げています。お客様は、信頼している整備士からの紹介であれば、喜んで話を聞いていただけます。",
+                        icon: "✅"
+                    }
+                ]
+            }
+        ];
+
+        // --- QUIZ DATA (10 Questions - No Timeout) ---
+        const quizQuestions = [
+            {
+                q: "日頃、保険の手続きを行わないメカニック（整備士）が、お客様に自動車保険のアプローチを行う「最大の役割と目的」は何ですか？",
+                choices: [
+                    { text: "「お車の物理的な状態（消耗・劣化・傷など）をプロの目で説明する際、自然に保険のメリットや不備に気づきを与えてフロントスタッフや保険部へパス（トスアップ）すること」", isCorrect: true },
+                    { text: "「フロントの代わりにその場でタブレットを使って、詳細な見積や契約の計上手続きを完結すること」", isCorrect: false },
+                    { text: "「他店舗の通販保険を一方的に批判し、解約を強要すること」", isCorrect: false },
+                    { text: "「生命保険の規約を事細かに朗読し、お客様を長時間引き留めること」", isCorrect: false }
+                ],
+                explanation: "メカニックの役割は「自分で手続きを完了させること」ではありません。お客様から絶大な信頼を寄せられている点検・整備説明のタイミングを活かし、不備に気づかせて店頭フロントや保険部へスムーズに「トスアップ（パス）」することが期待されています。"
+            },
+            {
+                q: "ドライブレコーダーの取付・作動状況の確認時に、通信型ドラレコ特約への切り替えメリットをメカニックからお伝えする「最大のフック（アピールポイント）」はどれですか？",
+                choices: [
+                    { text: "「最新のSDカードが毎年無料で3枚送られてくる」", isCorrect: false },
+                    { text: "「強い衝撃を感知した際に、その場で自動で緊急オペレーターに接続され、救急車の出動や事故連絡を代行してくれる命を守る機能」", isCorrect: true },
+                    { text: "「走行中、スピード違反をしたときに自動的に他車が避けてくれるシステム」", isCorrect: false },
+                    { text: "「録画した旅行映像を、ボタン一つで世界中のSNSに同時に自動公開できるエンタメ機能」", isCorrect: false }
+                ],
+                explanation: "市販ドラレコとの決定的な違いは「通信型による自動救命サポート」です。強い衝撃を受けた際に、意識を失っていてもGPSで位置を検知し救急搬送依頼をしてくれる安心感は、プロの整備士が安全を語る上で最高の切り口になります。"
+            },
+            {
+                q: "タイヤの摩耗や、パンク修理の整備説明を行うなかから、自動車保険のどのような補償の確認へと自然にトスアップすべきですか？",
+                choices: [
+                    { text: "「他社ネット保険と当社の保険料が何万円違っているかの詳細な電卓計算」", isCorrect: false },
+                    { text: "「タイヤスリップ等による万が一の単独事故の際、ご自身やご家族の治療費を100%全額すぐにカバーする『人身傷害保険』の条件確認」", isCorrect: true },
+                    { text: "「台風等でお車が完全に水没してしまった際の、お体の対人賠償の確認」", isCorrect: false },
+                    { text: "「自転車事故のみを完全にカバーする、ファミリーバイク特約の等級進行ルール」", isCorrect: false }
+                ],
+                explanation: "タイヤスリップなどの「自損事故」への最大の備えは「人身傷害保険」です。タイヤの新品交換をお手伝いした上で、万が一のときの「体」を守る補償に漏れがないか確認を促すのは、非常に親切で説得力のあるトスアップになります。"
+            },
+            {
+                q: "車下回りやマフラーのサビ、または軽微な擦り傷を発見した際、自費修理を考えておられるお客様に対し、メカニックからお伝えすべき「車両保険の賢い掛け方」は何ですか？",
+                choices: [
+                    { text: "「車両保険は高額なので絶対に外すべきである」", isCorrect: false },
+                    { text: "「車対車限定（エコノミー型）かつ免責金額を『10万円』等に設定し、普段の保険料を抑えつつ、水災によるお車の全損水没などの重大リスクに安く備えるアプローチ」", isCorrect: true },
+                    { text: "「自費の傷修理費用を毎月1000円ずつの自動車保険に強引に分割計上して支払う方法」", isCorrect: false },
+                    { text: "「保険の等級を一切下げずに、自費修理費用を全額他社に負担してもらう特約の活用」", isCorrect: false }
+                ],
+                explanation: "お客様が「車両保険は高い」と思い込んでいる場合、実用的な「エコノミー＋免責10万・20万設定」のアドバイスは、お車の価値を守りつつ保険料を抑える最大の目から鱗の価値（トスアップ素材）になります。"
+            },
+            {
+                q: "飛び石によってフロントガラスにひび割れ（キズ）が入り、ガラス交換の相談を受けた際、プロのメカニックとしてお伝えすべき「正しい保険適用知識」はどれですか？",
+                choices: [
+                    { text: "「飛び石は3等級ダウン事故になるため、絶対に保険は使わない方が良い」", isCorrect: false },
+                    { text: "「飛び石によるガラスの損傷は『1等級ダウン（かつ事故有1年）』扱いのため、ガラス交換等の高額修理時には保険を有利に活用できる可能性がある」", isCorrect: true },
+                    { text: "「フロントガラスは、保険会社が自社で無料で在庫をプレゼントするルールになっている」", isCorrect: false },
+                    { text: "「ガラス交換に保険を適用すると、今後のゴールド免許割引が剥奪される」", isCorrect: false }
+                ],
+                explanation: "飛び石（飛来中・落下中の他物との衝突）は「1等級ダウン事故」として扱われます。高額なガラス交換時には保険を適用した方が有利なケースが多いため、フロントで差額シミュレーションを準備するトスアップを行います。"
+            },
+            {
+                q: "ご家族でお乗りの2台目のお車の点検・オイル交換時、メカニックがプロの視点からお伝えすべき「ご家庭全体での保険の無駄」に関する代表的な気づきはどれですか？",
+                choices: [
+                    { text: "「ご家族それぞれ別々のお車に『弁護士特約』や『ファミリーバイク特約』が重複して付帯され、毎年無駄な保険料を払ってしまっている可能性」", isCorrect: true },
+                    { text: "「複数台を所有していると、自賠責保険が強制的に2重に引き落とされる違法状態」", isCorrect: false },
+                    { text: "「家族全員の年齢条件を、すべて一番若い人に合わせると保険料が10分の1になるという法則」", isCorrect: false },
+                    { text: "「2台目のお車は、1台目の任意保険を解約しないと新しく保険に加入することができないルール」", isCorrect: false }
+                ],
+                explanation: "2台以上の複数台を所有する家庭では、ファミリーバイク特約や弁護士特約が2重に付いてしまっている（重複の無駄）ケースが多発しています。これをアドバイスしてあげることは、お客様から深い感謝をいただくきっかけになります。"
+            },
+            {
+                q: "バッテリーの電圧低下が見られ、交換をお勧めすると同時に、お出かけ先での突然の不動トラブルに備え、お伝えすべき「コバックでお引き受けしている保険（ミック）のレッカーサービス」の最大の強みはどれですか？",
+                choices: [
+                    { text: "「故障時のレッカー搬入先は、最寄りの他社工場に限られ、コバックへの持ち込みはできない」", isCorrect: false },
+                    { text: "「お電話一本でコバック（自社）から無料のきれいな代車を最短で手配し、そのまま自社の優秀な工場へ無料レッカー搬入できる一元（ワンストップ）サポートの強み」", isCorrect: true },
+                    { text: "「バッテリー上がり時のジャンプスタート（ブースター接続）は、保険会社から有料で請求される」", isCorrect: false },
+                    { text: "「レッカーを使用すると、自動車保険の等級が一瞬で5等級ダウンしてしまう」", isCorrect: false }
+                ],
+                explanation: "ミックお引き受け保険の最大の強みは、お車の修理工場と代車、レッカーサービスが完全に一つに融合していることです。ネット保険などのように、パニックの際にお客様が別々に手配・電話する苦労を解消します。"
+            },
+            {
+                q: "車検時、自賠責保険（強制保険）しか加入していない（無保険）というお客様に対し、整備のプロの立場として任意保険の加入を説く際、最も的確な説明はどれですか？",
+                choices: [
+                    { text: "「自賠責保険は他人のケガや死亡に対する最低限の補償（人身のみ）であり、相手の車、ガードレール、そしてご自身のケガやお車の修理は、すべて1円も補償されない」", isCorrect: true },
+                    { text: "「自賠責に入っていれば、対物賠償は1億円まで国が完全に代わりに支払ってくれる」", isCorrect: false },
+                    { text: "「任意保険に入らなくても、コバックの車検の保証ですべての事故賠償を肩代わりできる」", isCorrect: false },
+                    { text: "「自賠責保険だけで運転しても、人身事故の場合は法律上100%過失がゼロになる」", isCorrect: false }
+                ],
+                explanation: "自賠責は「人身（おケガ・死亡）のみ」の最低限の補償（傷害120万限界など）です。他人の物や車、ご自身のケガや車の修理費は一切対象外のため、任意保険の加入が無保険状態（非常に危険）を救うプロの役割です。"
+            },
+            {
+                q: "ブレーキまわりの整備説明を行うなかから、自動ブレーキ（ASV）割引に関連して、お客様にトスアップできる「保険の仕組み」はどれですか？",
+                choices: [
+                    { text: "「自動ブレーキが一度でも作動すると、保険料が来年から自動的に3倍に上がってしまう」", isCorrect: false },
+                    { text: "「自動ブレーキ（ASV）の割引は、新車登録から3年以内という期間制限があり、それ以降は適用対象外（見直し）となること」", isCorrect: true },
+                    { text: "「ブレーキ点検を受けるだけで、任意保険料が毎年自動的に20%割引になる」", isCorrect: false },
+                    { text: "「自動ブレーキ割引を適用するためには、毎年国土交通省へ保険の直接申請が必要である」", isCorrect: false }
+                ],
+                explanation: "ASV（自動ブレーキ）割引は、お車の型式や新車登録後3年以内という制限があります。4年目の車検時に内容を確認し、正しく適用・見直しされているかフロントでアドバイスシートを用意するトスアップを行います。"
+            },
+            {
+                q: "メカニック（整備士）が「お車の健康診断（車検整備）」が無事安全に完了したお引渡し時、ご家族の「お体の健康診断」としてトスアップすべき相手は次のうち誰ですか？",
+                choices: [
+                    { text: "「提携している外部の大手他社生命保険会社のコールセンター」", isCorrect: false },
+                    { text: "「店舗のフロント事務チーム、または社内に常駐している優秀な『生命保険専門のパートナー（専任スタッフ）』」", isCorrect: true },
+                    { text: "「車検基本料金の収受を行う、外部金融機関の窓口」", isCorrect: false },
+                    { text: "「そのままトスアップせずに見送り、2年後の車検まで連絡しない」", isCorrect: false }
+                ],
+                explanation: "お車の健康診断からお体の健康（生命保険の無駄診断）へと繋ぎ、店舗の「生命保険専門パートナー（専任スタッフ等）」へ繋ぐ（トスアップする）ことで、窓口一元化の最大メリットをお客様にスムーズにお届けできます。"
+            }
+        ];
+
+        // --- NAVIGATION FUNCTIONS ---
+        function showScreen(screenId) {
+            document.querySelectorAll('main > section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            const activeScreen = document.getElementById(screenId);
+            activeScreen.classList.remove('hidden');
+            activeScreen.classList.add('animate-fade-in');
+        }
+
+        function goHome() {
+            showScreen('screen-home');
+        }
+
+        // --- MODE STARTERS ---
+        function startMode(mode) {
+            currentMode = mode;
+            if (mode === 'story') {
+                currentStoryIndex = 0;
+                storyScore = 0;
+                storyMood = 50;
+                initStoryStep();
+                showScreen('screen-story');
+            } else if (mode === 'quiz') {
+                currentQuizIndex = 0;
+                quizCorrectCount = 0;
+                initQuizQuestion();
+                showScreen('screen-quiz');
+            } else if (mode === 'sheet') {
+                showScreen('screen-sheet');
+            }
+        }
+
+        // --- STORY MODE LOGIC ---
+        function initStoryStep() {
+            const data = storyChapters[currentStoryIndex];
+            
+            // UI elements updating
+            document.getElementById('story-chapter-badge').innerText = data.chapter;
+            document.getElementById('story-chapter-title').innerText = data.title;
+            document.getElementById('story-mission-text').innerText = data.mission;
+            document.getElementById('story-hint-box').innerHTML = `<strong>💡 ミックのアドバイス:</strong> ${data.hint}`;
+            document.getElementById('story-customer-name').innerText = data.customer.name;
+            document.getElementById('story-customer-tag').innerText = data.customer.type;
+            document.getElementById('story-bubble-text').innerText = data.customer.bubble;
+            
+            // Inject avatar SVG
+            document.getElementById('story-avatar-container').innerHTML = data.customer.avatar;
+
+            // Reset Mood bar and score display
+            updateStoryHeader();
+
+            // Hide feedback box & choices area initially, show the prep (thinking) area
+            document.getElementById('story-feedback').classList.add('hidden');
+            document.getElementById('story-options').classList.add('hidden');
+            document.getElementById('story-prep-area').classList.remove('hidden');
+
+            const optionsContainer = document.getElementById('story-options');
+            optionsContainer.innerHTML = '';
+        }
+
+        // Triggered by "Show Choices" button click
+        function showStoryChoices() {
+            // Hide prep area
+            document.getElementById('story-prep-area').classList.add('hidden');
+
+            const optionsContainer = document.getElementById('story-options');
+            optionsContainer.innerHTML = '';
+            optionsContainer.classList.remove('hidden');
+
+            const data = storyChapters[currentStoryIndex];
+
+            // Inject Choice Buttons
+            data.choices.forEach((choice, index) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-xl border border-gray-200 bg-gray-50 hover:bg-blue-50 hover:border-blue-300 transition-all font-medium text-xs md:text-sm text-gray-800 flex items-start space-x-3 shadow-sm btn-hover animate-fade-in";
+                btn.innerHTML = `
+                    <div class="mt-1 bg-white text-gray-500 w-5 h-5 rounded-full flex items-center justify-center font-bold text-xs shadow-inner shrink-0 border border-gray-300">${String.fromCharCode(65 + index)}</div>
+                    <div class="flex-grow">${choice.text.slice(3)}</div>
+                `;
+                btn.onclick = () => selectStoryChoice(index);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function updateStoryHeader() {
+            document.getElementById('story-score').innerText = `${storyScore} 点`;
+            document.getElementById('story-mood-bar').style.width = `${storyMood}%`;
+            document.getElementById('story-mood-percent').innerText = `${storyMood}%`;
+
+            // Change color of progress bar based on score/mood
+            const bar = document.getElementById('story-mood-bar');
+            if (storyMood >= 70) {
+                bar.className = "bg-gradient-to-r from-emerald-500 to-green-500 h-full transition-all duration-500";
+            } else if (storyMood >= 40) {
+                bar.className = "bg-gradient-to-r from-yellow-500 to-orange-500 h-full transition-all duration-500";
+            } else {
+                bar.className = "bg-gradient-to-r from-red-600 to-rose-500 h-full transition-all duration-500";
+            }
+        }
+
+        function selectStoryChoice(choiceIndex) {
+            const data = storyChapters[currentStoryIndex];
+            const choice = data.choices[choiceIndex];
+
+            // Hide choices container
+            document.getElementById('story-options').classList.add('hidden');
+
+            // Apply modifications
+            storyScore += choice.score;
+            storyMood = Math.max(0, Math.min(100, storyMood + choice.mood));
+            updateStoryHeader();
+
+            // Set Feedback UI
+            const feedbackBox = document.getElementById('story-feedback');
+            const iconEl = document.getElementById('feedback-icon');
+            const titleEl = document.getElementById('feedback-title');
+            const descEl = document.getElementById('feedback-desc');
+            const nextBtnText = document.getElementById('btn-next-text');
+
+            feedbackBox.classList.remove('hidden');
+            
+            // Visual style of feedback box depending on score
+            if (choice.score === 100) {
+                feedbackBox.className = "space-y-4 bg-green-50 p-4 rounded-xl border border-green-300 transition-all duration-300 animate-fade-in";
+                iconEl.innerHTML = `<span class="text-green-600 text-3xl">🏆</span>`;
+            } else if (choice.score >= 50) {
+                feedbackBox.className = "space-y-4 bg-yellow-50 p-4 rounded-xl border border-yellow-300 transition-all duration-300 animate-fade-in";
+                iconEl.innerHTML = `<span class="text-yellow-600 text-3xl">⚠️</span>`;
+            } else {
+                feedbackBox.className = "space-y-4 bg-red-50 p-4 rounded-xl border border-red-300 transition-all duration-300 animate-fade-in";
+                iconEl.innerHTML = `<span class="text-red-600 text-3xl">❌</span>`;
+            }
+
+            titleEl.innerText = choice.feedbackTitle;
+            descEl.innerHTML = choice.feedbackDesc + `<br><span class="mt-2 block text-xs text-gray-500 font-bold">獲得スコア: +${choice.score}点 | お客様納得度変動: ${choice.mood >= 0 ? '+' : ''}${choice.mood}%</span>`;
+
+            // Adjust Next Button text
+            if (currentStoryIndex === storyChapters.length - 1) {
+                nextBtnText.innerText = `最終研修スコアを確認する`;
+            } else {
+                nextBtnText.innerText = `第${currentStoryIndex + 2}章へ進む`;
+            }
+        }
+
+        function nextStoryStep() {
+            if (currentStoryIndex < storyChapters.length - 1) {
+                currentStoryIndex++;
+                initStoryStep();
+            } else {
+                showTrainingResults('story');
+            }
+        }
+
+        // --- QUIZ MODE LOGIC (NO TIMEOUT) ---
+        function initQuizQuestion() {
+            const data = quizQuestions[currentQuizIndex];
+            
+            // Set up progress text
+            document.getElementById('quiz-progress').innerText = `${currentQuizIndex + 1} / ${quizQuestions.length} 問`;
+            document.getElementById('quiz-score').innerText = `${quizCorrectCount} / ${quizQuestions.length}`;
+
+            // Update Progress Bar
+            const progressPercent = ((currentQuizIndex + 1) / quizQuestions.length) * 100;
+            document.getElementById('quiz-progress-bar').style.width = `${progressPercent}%`;
+
+            // Put Question Text
+            document.getElementById('quiz-question-text').innerText = data.q;
+
+            // Hide feedback box
+            document.getElementById('quiz-feedback-box').classList.add('hidden');
+
+            // Generate option buttons
+            const optionsContainer = document.getElementById('quiz-options-container');
+            optionsContainer.innerHTML = '';
+            optionsContainer.classList.remove('hidden');
+
+            data.choices.forEach((choice, index) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-xl border border-gray-200 bg-gray-50 hover:bg-blue-50 hover:border-blue-300 transition-all text-xs md:text-sm font-medium text-gray-800 flex items-start space-x-2 shadow-sm btn-hover";
+                btn.innerHTML = `
+                    <div class="mt-0.5 bg-white text-gray-500 w-5 h-5 rounded-full flex items-center justify-center font-bold text-xs shadow-inner shrink-0 border border-gray-300">${index + 1}</div>
+                    <div class="flex-grow">${choice.text}</div>
+                `;
+                btn.onclick = () => selectQuizChoice(index);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectQuizChoice(selectedIndex) {
+            const data = quizQuestions[currentQuizIndex];
+            const optionsContainer = document.getElementById('quiz-options-container');
+            
+            // Hide options to avoid double selecting
+            optionsContainer.classList.add('hidden');
+
+            const feedbackBox = document.getElementById('quiz-feedback-box');
+            const iconEl = document.getElementById('quiz-feedback-icon');
+            const titleEl = document.getElementById('quiz-feedback-title');
+            const explEl = document.getElementById('quiz-feedback-explanation');
+            const nextBtn = document.getElementById('btn-quiz-next');
+
+            feedbackBox.classList.remove('hidden');
+
+            let isCorrect = false;
+            if (selectedIndex !== -1 && data.choices[selectedIndex].isCorrect) {
+                isCorrect = true;
+                quizCorrectCount++;
+            }
+
+            // UI styling based on correctness
+            if (isCorrect) {
+                feedbackBox.className = "mt-6 p-4 rounded-xl border bg-emerald-50 border-emerald-300 transition-all duration-300 animate-fade-in";
+                iconEl.innerHTML = "🎯";
+                titleEl.className = "font-black text-sm md:text-base text-emerald-800";
+                titleEl.innerText = "見事、正解です！抜群のアプローチセンス！";
+            } else {
+                feedbackBox.className = "mt-6 p-4 rounded-xl border bg-rose-50 border-rose-300 transition-all duration-300 animate-fade-in";
+                iconEl.innerHTML = "💡";
+                titleEl.className = "font-black text-sm md:text-base text-rose-800";
+                titleEl.innerText = "不正解です。ミック秘伝の正解を確認しましょう";
+            }
+
+            explEl.innerHTML = `
+                <div class="mb-2 text-xs font-bold text-gray-400">解説と対応アドバイス:</div>
+                <div class="text-xs md:text-sm text-gray-700 leading-relaxed">${data.explanation}</div>
+            `;
+
+            // Adjust Next Button Text
+            if (currentQuizIndex === quizQuestions.length - 1) {
+                nextBtn.innerText = "総合スコアを確認する";
+            } else {
+                nextBtn.innerText = "次の問題へ進む";
+            }
+        }
+
+        function nextQuizQuestion() {
+            if (currentQuizIndex < quizQuestions.length - 1) {
+                currentQuizIndex++;
+                initQuizQuestion();
+            } else {
+                showTrainingResults('quiz');
+            }
+        }
+
+        // --- RESULTS GENERATOR ---
+        function showTrainingResults(mode) {
+            showScreen('screen-result');
+            
+            const modeDesc = document.getElementById('result-mode-desc');
+            const scoreText = document.getElementById('result-score-text');
+            const rankText = document.getElementById('result-rank');
+            const commentText = document.getElementById('result-comment');
+
+            if (mode === 'story') {
+                modeDesc.innerText = "ストーリー会話シミュレーター 終了 (全10章)";
+                // Max points is 1000 (100 * 10 chapters)
+                const percentage = Math.round((storyScore / 1000) * 100);
+                scoreText.innerText = `${percentage} ％`;
+
+                if (percentage >= 90) {
+                    rankText.innerText = "🏆 伝説級のトスアップマスター・メカニック！";
+                    commentText.innerText = "素晴らしいトスアップスキルです！日常の点検・整備説明の中から一切売り込み感なく、お車の安心安全（通信型ドラレコ、人傷、車両水災等）の重要性を完璧に気づかせ、フロントへのバトンパスができています。あなたからのトスは100%成約に繋がります！";
+                } else if (percentage >= 70) {
+                    rankText.innerText = "🥈 優秀なアドバイザー・メカニック";
+                    commentText.innerText = "お客様を惹きつける素晴らしいトスアップトークができています。少し迷った選択肢があったかもしれませんが、本アプリのカンペ集などで切り口を確認することで、さらに多くの『トスのタネ』をフロントに放り込めるようになります。自信を持ってリフト横でお話ししましょう！";
+                } else {
+                    rankText.innerText = "🔰 成長期！まずはカンペ集を活用しよう";
+                    commentText.innerText = "整備説明に集中するあまり、保険特約への橋渡しや気づきを与えるタイミングを逃してしまう傾向があったかもしれません。心配いりません！本アプリの『トスアップ・カンペ集』を見て、オイル交換やドラレコ点検時の一言をそのまま真似してトスしてみることから始めましょう。";
+                }
+            } else if (mode === 'quiz') {
+                modeDesc.innerText = "ニーズ喚起クイズ 終了 (全10問)";
+                const totalQ = quizQuestions.length;
+                scoreText.innerText = `${quizCorrectCount} / ${totalQ} 正解`;
+
+                if (quizCorrectCount === totalQ) {
+                    rankText.innerText = "🏆 メカニック・トスアップパーフェクトマスター！";
+                    commentText.innerText = "見事、全問正解です！飛び石の1等級ダウン、ASV割引、バッテリー劣化時の自社レッカー一元強み、複数台重複まで、メカニック業務に関係の深い自動車保険の知識を完全に網羅しています。素晴らしいトスを期待しています！";
+                } else if (quizCorrectCount >= 7) {
+                    rankText.innerText = "✨ 実戦級メカニック・アドバイザー";
+                    commentText.innerText = "合格点です！整備のプロとして自動車保険の基本やトスアップの基準を深く理解できています。間違えてしまった問題の解説をチェックし、明日から早速お車の状態に合わせたトスを店舗で試してみましょう！";
+                } else {
+                    rankText.innerText = "📝 要再復習：お役立ち知識を磨こう";
+                    commentText.innerText = "自動車保険のいくつかの基本的な特約や、整備説明から繋ぐための専門知識が曖昧な部分があったかもしれません。このクイズは繰り返しチャレンジできます。ぜひ満点を獲得して自信をつけ、フロントに最高のトスを供給してください！";
+                }
+            }
+        }
+
+        function retryMode() {
+            startMode(currentMode);
+        }
+
+        // --- CHEATSHEET TAB SWITCHING ---
+        function switchManualTab(tabId) {
+            document.getElementById('tab-kobac').classList.add('hidden');
+            document.getElementById('tab-talk').classList.add('hidden');
+            document.getElementById('tab-support').classList.add('hidden');
+
+            const btns = [
+                { id: 'btn-tab-kobac', color: 'border-red-500 text-red-600' },
+                { id: 'btn-tab-talk', color: 'border-green-500 text-green-600' },
+                { id: 'btn-tab-support', color: 'border-blue-500 text-blue-600' }
+            ];
+
+            btns.forEach(b => {
+                const btnEl = document.getElementById(b.id);
+                btnEl.className = "px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 focus:outline-none";
+            });
+
+            document.getElementById(tabId).classList.remove('hidden');
+
+            const activeBtn = document.getElementById('btn-' + tabId);
+            if (tabId === 'tab-kobac') {
+                activeBtn.className = "px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-red-500 text-red-600 focus:outline-none";
+            } else if (tabId === 'tab-talk') {
+                activeBtn.className = "px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-green-500 text-green-600 focus:outline-none";
+            } else if (tabId === 'tab-support') {
+                activeBtn.className = "px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-blue-500 text-blue-600 focus:outline-none";
+            }
+        }
+    </script>
+</body>
+</html>

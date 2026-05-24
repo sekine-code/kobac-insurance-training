@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コバック×ミック自動車保険 中堅・実戦向けトレーニングアプリ</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .kobac-red {
+            background-color: #E60012;
+        }
+        .kobac-red-text {
+            color: #E60012;
+        }
+        .mic-blue {
+            background-color: #005CAF;
+        }
+        .mic-blue-text {
+            color: #005CAF;
+        }
+        .btn-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md border-b-4 border-red-600 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="kobac-red text-white font-extrabold px-3 py-1 rounded-md text-xs md:text-sm tracking-wider">
+                    車検のコバック
+                </div>
+                <div class="mic-blue text-white font-extrabold px-3 py-1 rounded-md text-xs md:text-sm tracking-wider">
+                    ミック
+                </div>
+                <h1 class="font-black text-gray-800 text-sm md:text-lg hidden sm:block">自動車保険アドバイザートレーニング</h1>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="text-xs md:text-sm font-bold bg-blue-100 text-blue-800 px-3 py-1 rounded-full border border-blue-300">
+                    <i class="fa-solid fa-star mr-1"></i>中堅・実戦編
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-6 flex flex-col justify-center">
+
+        <!-- ==================== HOME SCREEN ==================== -->
+        <section id="screen-home" class="animate-fade-in flex flex-col justify-between space-y-6">
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10 border border-gray-100 flex flex-col md:flex-row items-center gap-8 my-auto">
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="space-y-2">
+                        <span class="text-red-600 font-black tracking-wide text-sm block">コバックの車検力 × ミックの保険力</span>
+                        <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+                            現場の難課題を突破！<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">実戦自動車保険推進編</span>
+                        </h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">
+                        店舗フロントで日々発生する「保険の拒絶や実務上の障壁」を突破するための実戦トレーニングアプリです。<br>
+                        アップロードいただいた<b>「保険案内マニュアル｜車検での来店」</b>に完全準拠し、前日コール、代車貸出制限、スマホ提示（簡易記入票の回収）、自賠責の限界訴求、他社20等級月払の応当日即時切り替え、店頭での他社解約電話連携、見送り時の反応A・B登録まで、即戦力の技術をロールプレイング形式で体得できます。
+                    </p>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl">
+                        <h3 class="font-bold text-blue-900 text-sm flex items-center">
+                            <i class="fa-solid fa-clipboard-list mr-2"></i>本日の実戦研修目標
+                        </h3>
+                        <ul class="text-xs md:text-sm text-blue-800 mt-2 space-y-1 list-disc list-inside">
+                            <li>前日コールの簡潔版・詳細版トークの使い分けと、当日の証券回収・コピー</li>
+                            <li>「代車貸出時に保険証券の提示がない（無保険含む）場合、貸出原則禁止」の徹底</li>
+                            <li>スマホ画面提示などコピー不可時の「自動車保険簡易記入票」による記録</li>
+                            <li>自賠責（傷害120万円等）の限界訴求と、未加入者への使命感あるアプローチ</li>
+                            <li>20等級月払契約の「直近応当日」を利用した、満期を待たない即時切り替えアプローチ</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col items-center justify-center bg-gray-50 rounded-xl p-6 border border-gray-200">
+                    <div class="text-center mb-6">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='120' height='120'><circle cx='50' cy='50' r='45' fill='%23005CAF'/><rect x='25' y='45' width='50' height='30' rx='5' fill='white'/><circle cx='38' cy='75' r='8' fill='%23333'/><circle cx='62' cy='75' r='8' fill='%23333'/><path d='M30,45 L40,25 L60,25 L70,45 Z' fill='white'/><rect x='45' y='32' width='10' height='10' fill='%23E60012'/><text x='50' y='63' font-family='Arial' font-size='12' font-weight='bold' fill='%23005CAF' text-anchor='middle'>MIC</text></svg>" alt="ミック推進" class="w-24 h-24 mb-2">
+                        <p class="font-bold text-gray-800 text-lg">トレーニングメニュー</p>
+                        <p class="text-xs text-gray-400 mt-1">実務マニュアルに沿った選択肢をじっくり選ぼう！</p>
+                    </div>
+                    <div class="w-full space-y-3">
+                        <button onclick="startMode('story')" class="w-full py-4 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-3 text-base md:text-lg">
+                            <i class="fa-solid fa-comments text-xl"></i>
+                            <span>1. 会話シミュレーター（全10章）</span>
+                        </button>
+                        <button onclick="startMode('quiz')" class="w-full py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-3 text-base md:text-lg">
+                            <i class="fa-solid fa-circle-question text-xl"></i>
+                            <span>2. ニーズ喚起クイズ（全10問）</span>
+                        </button>
+                        <button onclick="startMode('sheet')" class="w-full py-3 bg-white hover:bg-gray-100 text-gray-700 border border-gray-300 font-bold rounded-xl shadow transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-3 text-sm">
+                            <i class="fa-solid fa-book-open text-gray-500"></i>
+                            <span>3. 保険案内マニュアル・カンペ集</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Info Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-500">
+                <div class="bg-white p-4 rounded-xl border border-gray-100 flex items-center space-x-3 shadow-sm">
+                    <div class="p-3 bg-red-100 rounded-full text-red-600"><i class="fa-solid fa-car-on"></i></div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">代車貸出の原則ルール</h4>
+                        <p class="text-gray-500 text-xs">保険証券の提示がない（無保険含む）場合、代車の貸出は「原則禁止」です。</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-gray-100 flex items-center space-x-3 shadow-sm">
+                    <div class="p-3 bg-blue-100 rounded-full text-blue-600"><i class="fa-solid fa-file-invoice"></i></div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">20等級月払の即時切り替え</h4>
+                        <p class="text-gray-500 text-xs">満期を待たず、直近の「応当日」を始期日として切り替え手続きへ！</p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-gray-100 flex items-center space-x-3 shadow-sm">
+                    <div class="p-3 bg-purple-100 rounded-full text-purple-600"><i class="fa-solid fa-chart-line"></i></div>
+                    <div>
+                        <h4 class="font-bold text-gray-800">活動管理「反応A・B」の記録</h4>
+                        <p class="text-gray-500 text-xs">未成約者の反応をタブレットに記録し、保険部での「他社満期追跡」へ連携。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== STORY MODE ==================== -->
+        <section id="screen-story" class="hidden flex-grow flex flex-col space-y-4 animate-fade-in">
+            <!-- Progress & Score Header -->
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-wrap justify-between items-center gap-4">
+                <div class="flex items-center space-x-3">
+                    <button onclick="goHome()" class="text-gray-500 hover:text-gray-700 p-1"><i class="fa-solid fa-arrow-left text-lg"></i></button>
+                    <div>
+                        <span id="story-chapter-badge" class="text-xs font-bold bg-red-100 text-red-700 px-2.5 py-0.5 rounded-full">第1章</span>
+                        <h3 id="story-chapter-title" class="font-black text-gray-800 text-sm md:text-base mt-1">会話進行中...</h3>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs font-bold text-gray-500">お客様の納得度:</span>
+                        <div class="w-24 md:w-32 bg-gray-200 rounded-full h-3 overflow-hidden">
+                            <div id="story-mood-bar" class="bg-gradient-to-r from-red-50 to-green-500 h-full transition-all duration-500" style="width: 50%;"></div>
+                        </div>
+                        <span id="story-mood-percent" class="text-xs font-bold text-gray-700">50%</span>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-gray-500 block">合計スコア</span>
+                        <span id="story-score" class="font-black text-blue-600 text-base md:text-lg">0 点</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dialogue Interaction Area -->
+            <div class="flex-grow grid grid-cols-1 lg:grid-cols-12 gap-4">
+                <!-- Customer info panel -->
+                <div class="lg:col-span-4 bg-gradient-to-b from-gray-50 to-gray-100 rounded-xl p-4 border border-gray-200 flex flex-col justify-between min-h-[220px] lg:min-h-[400px]">
+                    <div class="text-center font-bold text-xs bg-gray-200 text-gray-700 py-1 px-3 rounded-full self-center">
+                        店舗フロント・シミュレーション
+                    </div>
+                    
+                    <div class="flex flex-col items-center my-auto" id="customer-container">
+                        <div id="story-avatar-container" class="w-28 h-28 md:w-36 md:h-36 bg-white rounded-full shadow-lg border-4 border-white flex items-center justify-center overflow-hidden">
+                            <!-- SVG Avatar will be injected here -->
+                        </div>
+                        <div class="mt-3 bg-gray-800 text-white font-extrabold px-4 py-1.5 rounded-full text-sm shadow-sm" id="story-customer-name">
+                            コバック太郎様
+                        </div>
+                        <span id="story-customer-tag" class="text-xs text-blue-600 mt-1 font-semibold bg-blue-50 px-2 py-0.5 rounded border border-blue-200">車検新規のお客様</span>
+                    </div>
+
+                    <!-- Speech Bubble of customer -->
+                    <div class="bg-white border border-gray-300 p-3 rounded-xl shadow-md relative mt-4">
+                        <div class="absolute -top-2.5 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[8px] border-b-white"></div>
+                        <p id="story-bubble-text" class="text-xs md:text-sm text-gray-800 font-medium text-center italic">「車検、何時に終わるかな？」</p>
+                    </div>
+                </div>
+
+                <!-- Action / Choices Panel -->
+                <div class="lg:col-span-8 flex flex-col justify-between bg-white rounded-xl shadow-lg p-5 border border-gray-100">
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center space-x-2 text-xs font-bold text-gray-400 uppercase tracking-wider">
+                            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+                            <span>現在のミッション</span>
+                        </div>
+                        <h4 id="story-mission-text" class="text-sm md:text-base font-bold text-gray-800 leading-snug">
+                            ミッションテキストがここに入ります。
+                        </h4>
+                        <div class="p-3 bg-blue-50 text-blue-900 border border-blue-100 rounded-lg text-xs leading-relaxed" id="story-hint-box">
+                            <strong>💡 ミックのアドバイス:</strong> ヒントがここに入ります。
+                        </div>
+                    </div>
+
+                    <!-- Brainstorming Zone (First state) -->
+                    <div id="story-prep-area" class="p-6 bg-amber-50 border border-amber-200 rounded-xl text-center space-y-4">
+                        <p class="text-sm font-bold text-amber-800">
+                            <i class="fa-solid fa-lightbulb mr-1 animate-bounce"></i> アクティブラーニング実践中！
+                        </p>
+                        <p class="text-xs md:text-sm text-gray-700 leading-relaxed">
+                            上記の状況に対して、<strong>マニュアルに準拠したミックの最適なアプローチは？</strong><br>
+                            まずは自分の頭の中で、どのような理由とトーンで解決するかをトークとして組み立ててみましょう！
+                        </p>
+                        <button onclick="showStoryChoices()" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl shadow-md transition-all text-xs md:text-sm inline-flex items-center space-x-2">
+                            <span>自分の答えをイメージした！選択肢を表示する</span>
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <!-- Choices Area (Initially Hidden) -->
+                    <div id="story-options" class="hidden space-y-3">
+                        <!-- Choice buttons dynamically added -->
+                    </div>
+
+                    <!-- Feedback Area (Hidden until a choice is clicked) -->
+                    <div id="story-feedback" class="hidden space-y-4 p-4 rounded-xl border transition-all duration-300">
+                        <div class="flex items-start space-x-3">
+                            <div id="feedback-icon" class="text-2xl mt-0.5"></div>
+                            <div class="flex-grow space-y-1">
+                                <h5 id="feedback-title" class="font-extrabold text-sm md:text-base text-gray-900">評価</h5>
+                                <p id="feedback-desc" class="text-xs md:text-sm text-gray-700 leading-relaxed">フィードバック説明が入ります。</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <button id="btn-next-step" onclick="nextStoryStep()" class="px-5 py-2.5 bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-lg shadow text-xs md:text-sm flex items-center space-x-2">
+                                <span id="btn-next-text">次へ進む</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== QUIZ MODE (NO TIMEOUT) ==================== -->
+        <section id="screen-quiz" class="hidden flex-grow flex flex-col space-y-4 animate-fade-in">
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-wrap justify-between items-center gap-4">
+                <div class="flex items-center space-x-3">
+                    <button onclick="goHome()" class="text-gray-500 hover:text-gray-700 p-1"><i class="fa-solid fa-arrow-left text-lg"></i></button>
+                    <div>
+                        <span class="text-xs font-bold bg-blue-100 text-blue-700 px-2.5 py-0.5 rounded-full">知識定着セッション</span>
+                        <h3 class="font-black text-gray-800 text-sm md:text-base mt-1">ニーズ喚起クイズ</h3>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="text-right">
+                        <span class="text-xs text-gray-500 block">問題進行度</span>
+                        <span id="quiz-progress" class="font-black text-gray-700 text-sm md:text-base">1 / 10 問</span>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-gray-500 block">正解数</span>
+                        <span id="quiz-score" class="font-black text-green-600 text-sm md:text-base">0 / 10</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Main Card -->
+            <div class="bg-white rounded-xl shadow-lg border border-gray-100 p-6 flex flex-col justify-between flex-grow">
+                <div class="space-y-6">
+                    <!-- Progress Information instead of timer -->
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-xs font-bold text-gray-500">
+                            <span>焦らずじっくり、マニュアルに沿った最適な選択肢を選びましょう！</span>
+                            <span class="text-blue-600 font-black"><i class="fa-solid fa-mug-hot mr-1"></i>じっくり学習モード</span>
+                        </div>
+                        <div class="w-full bg-gray-100 h-2.5 rounded-full overflow-hidden">
+                            <div id="quiz-progress-bar" class="bg-blue-500 h-full transition-all duration-300" style="width: 10%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl space-y-1">
+                        <span class="text-xs font-bold text-blue-600 block"><i class="fa-solid fa-circle-question mr-1"></i>QUESTION</span>
+                        <p id="quiz-question-text" class="text-sm md:text-base font-bold text-gray-800 leading-relaxed">
+                            問題文がここに入ります。
+                        </p>
+                    </div>
+
+                    <!-- Options list -->
+                    <div id="quiz-options-container" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <!-- Dynamic buttons for quiz choices -->
+                    </div>
+                </div>
+
+                <!-- Quiz feedback area -->
+                <div id="quiz-feedback-box" class="hidden mt-6 p-4 rounded-xl border transition-all duration-300">
+                    <div class="flex items-start space-x-3">
+                        <div id="quiz-feedback-icon" class="text-3xl"></div>
+                        <div class="flex-grow space-y-1">
+                            <h4 id="quiz-feedback-title" class="font-black text-sm md:text-base">判定結果</h4>
+                            <div id="quiz-feedback-explanation" class="text-xs md:text-sm text-gray-700 leading-relaxed">解説文がここに入ります。</div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end mt-4">
+                        <button id="btn-quiz-next" onclick="nextQuizQuestion()" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow text-xs md:text-sm">
+                            次の問題へ進む
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== STUDY MANUAL SHEET ==================== -->
+        <section id="screen-sheet" class="hidden flex-grow flex flex-col space-y-4 animate-fade-in">
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <button onclick="goHome()" class="text-gray-500 hover:text-gray-700 p-1"><i class="fa-solid fa-arrow-left text-lg"></i></button>
+                    <div>
+                        <span class="text-xs font-bold bg-purple-100 text-purple-700 px-2.5 py-0.5 rounded-full">お役立ちマニュアル</span>
+                        <h3 class="font-black text-gray-800 text-sm md:text-base mt-1">ミック自動車保険アプローチ・カンペ集</h3>
+                    </div>
+                </div>
+                <button onclick="goHome()" class="text-xs font-bold text-blue-600 hover:underline">ホームに戻る</button>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100 space-y-6 flex-grow">
+                <div class="flex flex-wrap border-b border-gray-200 gap-2">
+                    <button onclick="switchManualTab('tab-kobac')" id="btn-tab-kobac" class="px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-red-500 text-red-600 focus:outline-none">
+                        🚗 コバック兼業の強み
+                    </button>
+                    <button onclick="switchManualTab('tab-talk')" id="btn-tab-talk" class="px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 focus:outline-none">
+                        🗣️ 魔法のトーク集
+                    </button>
+                    <button onclick="switchManualTab('tab-support')" id="btn-tab-support" class="px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 focus:outline-none">
+                        🤝 本部（サポートチーム）との連携
+                    </button>
+                </div>
+
+                <!-- Tab Content 1 -->
+                <div id="tab-kobac" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gradient-to-br from-red-50 to-white p-5 rounded-xl border border-red-100 space-y-3">
+                            <h4 class="font-extrabold text-red-900 text-base md:text-lg flex items-center">
+                                <i class="fa-solid fa-star mr-2 text-yellow-500"></i>車検×保険のシナジー
+                            </h4>
+                            <p class="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                車検のコバックを運営するミックグループだからこそ、一般的な代理店や通販保険には真似できない決定的な価値を届けることができます。
+                            </p>
+                            <ul class="text-xs text-gray-600 space-y-2 list-disc list-inside">
+                                <li><strong>お客様接点：</strong>車検という「年1〜2回必ず車を見せるタイミング」に直接アプローチができる。</li>
+                                <li><strong>事故時の「電話一本」解決：</strong>レッカー、保険代理店への連絡、傷の修理（自社鈑金工場あり）、代車提供まで一元対応！</li>
+                                <li><strong>車検割引制度：</strong>自動車保険の見直しやご提案の代わりに、車検時の特典やアドバイスが提供できる。</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-white p-5 rounded-xl border border-blue-100 space-y-3">
+                            <h4 class="font-extrabold text-blue-900 text-base md:text-lg flex items-center">
+                                <i class="fa-solid fa-circle-check mr-2 text-blue-500"></i>通販型（ネット保険）との比較優位
+                            </h4>
+                            <p class="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                「安さ」だけでネット保険を選ぶお客様への切り返しトークに強くなろう！
+                            </p>
+                            <div class="space-y-2">
+                                <div class="bg-white p-2.5 rounded-lg border border-blue-200 text-xs">
+                                    <strong class="text-blue-800">事故時の労力の違い：</strong><br>
+                                    ネット保険：自分でレッカー・代車・鈑金工場すべてを手配。<br>
+                                    <strong>コバック×ミック：</strong>すべてお任せ。代車も自店ですぐ手配可能！
+                                </div>
+                                <div class="bg-white p-2.5 rounded-lg border border-blue-200 text-xs">
+                                    <strong class="text-blue-800">「ご意向確認」の違い：</strong><br>
+                                    ネット保険：自分の判断で画面をポチポチ、実は不要な補償を多く買ってしまったり、必要な特約を外しているリスク大。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content 2 -->
+                <div id="tab-talk" class="hidden space-y-6">
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-green-500 pl-4 py-2">
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">① 車検受付時の「抵抗感ゼロ」証券お預かりトーク</h4>
+                            <p class="text-xs text-gray-500 mt-1">目的：売り込みと思われずに保険証券を回収する</p>
+                            <div class="mt-2 bg-green-50 p-3 rounded-lg border border-green-200 text-xs md:text-sm text-green-900 italic font-medium leading-relaxed">
+                                「車検受付中, 少しお時間頂きますね。実は、今コバックでは、お車の安全確認と一緒に『自動車保険の無料健康診断』をさせていただいています。もしスマホ等に今お持ちの保険証券の画像、または車にお乗せの証券があれば、3分だけ見せていただけませんか？重複している無駄や、損をしている割引がないか、車検完了までに見極めてアドバイスシートをお渡しいたします！」
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-yellow-500 pl-4 py-2">
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">② 2台以上お持ちのご家庭向け「重複の無駄」確認トーク</h4>
+                            <p class="text-xs text-gray-500 mt-1">目的：家族全体の契約を一元管理（ミック）に寄せるきっかけ作り</p>
+                            <div class="mt-2 bg-yellow-50 p-3 rounded-lg border border-green-200 text-xs md:text-sm text-yellow-900 italic font-medium leading-relaxed">
+                                「ご家族でお車を2台以上お持ちとのこと、とても素敵ですね！実はこれ、多くのご家庭で自動車保険がもったいない状態になっているんです。『弁護士特約』や『ファミリーバイク特約』は、ご家族のどなたか1台だけに付けておけば家族全員が対象になるのをご存知でしたか？２台ともに付いていると、毎年余分な保険料を捨てることになってしまいます。すぐにお調べしますね！」
+                            </div>
+                        </div>
+
+                        <div class="border-l-4 border-red-500 pl-4 py-2">
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">③ コバックの「代車無料＆すぐ手配」フックトーク</h4>
+                            <p class="text-xs text-gray-500 mt-1">目的：ネット型などの競合に対してコバックの即応性をアピールする</p>
+                            <div class="mt-2 bg-red-50 p-3 rounded-lg border border-red-200 text-xs md:text-sm text-red-900 italic font-medium leading-relaxed">
+                                「万が一の事故の時、他社のネット保険だと代車の確保に数日かかったり、レンタカー特約を十分に設定していないと自分で費用を払わなければならないケースがあります。ですが、コバックでお引受けしている自動車保険なら、私たちの店舗から直接、きれいな代車を最短でお出しすることができます。事故でパニックの時、代車が目の前にある安心感は抜群ですよ！」
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content 3 -->
+                <div id="tab-support" class="hidden space-y-4">
+                    <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-3">
+                        <h4 class="font-bold text-gray-800 text-xs md:text-sm">中堅実務「店舗サポートチーム」および各インフラ連携</h4>
+                        <p class="text-xs md:text-sm text-gray-700 leading-relaxed">
+                            中堅実務スタッフはマニュアルを深く理解し、店頭でのお客様の反応や課題を素早く見極め、本部サポートやアプリツールと完全連携します。
+                        </p>
+                        
+                        <div class="relative pl-6 border-l-2 border-blue-500 space-y-6 mt-4">
+                            <div class="relative">
+                                <div class="absolute -left-8 top-0 bg-blue-500 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold">1</div>
+                                <h5 class="font-bold text-gray-800 text-xs md:text-sm">代車貸出制限の厳守</h5>
+                                <p class="text-xs text-gray-500 mt-0.5">保険証券の提示がない（無保険含む）お客様は、代車貸出を原則禁止とします。店長・マネジャーへ必ず相談し確認をとるルールを徹底します。</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-8 top-0 bg-blue-500 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold">2</div>
+                                <h5 class="font-bold text-gray-800 text-xs md:text-sm">見積作成管理アプリ（Mitekiアプリなど）の活用</h5>
+                                <p class="text-xs text-gray-500 mt-0.5">回収した他社証券やヒアリング内容、案内時の反応などをアプリを通じて本部（保険部）へ即座に送信。正確で見栄えの良いアドバイスシートを車検完了（出庫）時までに手元に揃えます。</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-8 top-0 bg-blue-500 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold">3</div>
+                                <h5 class="font-bold text-gray-800 text-xs md:text-sm">20等級月払の応当日即時切り替え</h5>
+                                <p class="text-xs text-gray-500 mt-0.5">満期日を待たず、当月または翌月の「応当日」で他社解約・自社新規手続きを行い、すぐにコバック×ミックの強固な一元事故サポートに切り替えていただくアプローチを行います。</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-8 top-0 bg-blue-500 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold">4</div>
+                                <h5 class="font-bold text-gray-800 text-xs md:text-sm">未成約者の「反応A・B登録」の徹底</h5>
+                                <p class="text-xs text-gray-500 mt-0.5">車検お引渡し時に成約に至らなかった場合でも、他社満期日に向けた追跡フォローを絶やさないため、タブレットに反応（反応A：前向き検討、反応B：他社継続など）を漏れなく入力。保険部へ自動連携させます。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TRAINING RESULT SCREEN ==================== -->
+        <section id="screen-result" class="hidden flex-grow flex flex-col justify-center items-center my-auto py-8 animate-fade-in">
+            <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full border border-gray-100 text-center space-y-6">
+                <div class="w-20 h-20 bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center text-3xl mx-auto shadow-inner animate-bounce">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-xl md:text-2xl font-black text-gray-900">トレーニング完了！</h3>
+                    <p id="result-mode-desc" class="text-xs text-gray-500">お疲れ様でした！</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <span class="text-xs text-gray-500 block font-bold">あなたの最終成績</span>
+                    <span id="result-score-text" class="text-3xl font-black text-red-600">85 点</span>
+                    <p id="result-rank" class="text-xs md:text-sm font-bold text-gray-700 mt-2">優秀なジュニアアドバイザー</p>
+                </div>
+                <p id="result-comment" class="text-xs md:text-sm text-gray-600 leading-relaxed px-2">
+                    アドバイスコメントが入ります。
+                </p>
+                <div class="pt-4 flex flex-col space-y-2">
+                    <button onclick="goHome()" class="w-full py-3 bg-gray-900 text-white font-bold rounded-xl shadow hover:bg-gray-800 transition text-xs md:text-sm">
+                        メニューに戻る
+                    </button>
+                    <button id="btn-retry-mode" onclick="retryMode()" class="w-full py-3 bg-white text-gray-700 border border-gray-300 font-bold rounded-xl shadow hover:bg-gray-100 transition text-xs md:text-sm">
+                        もう一度挑戦する
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400 py-4 border-t border-slate-700">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs">
+            <p>© 2026 MIC Group. All Rights Reserved. (車検のコバック×ミック保険部)</p>
+            <div class="flex space-x-4">
+                <span>連携インフラ: kintone / Notion / Looker Studio</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript Logic -->
+    <script>
+        // Global State Variables
+        let currentMode = ''; 
+        let currentStoryIndex = 0;
+        let storyScore = 0;
+        let storyMood = 50; 
+        
+        let currentQuizIndex = 0;
+        let quizCorrectCount = 0;
+
+        // --- STORY DATA (Simulation: 10 Chapters for Experts, fully mapped to your Notion Manual) ---
+        const storyChapters = [
+            {
+                chapter: "第1章",
+                title: "入庫前日の電話案内（車検前日コール）",
+                mission: "入庫前日にお客様へ車検のご案内電話を掛けます。マニュアルに規定された『簡潔な電話案内』に徹し、証券持参を気持ちよく確約させましょう。",
+                hint: "「お電話口では、来店された際に詳しく説明することとし、まずはご来店いただくこと、証券を持参いただくことにフォーカスする」のがマニュアルの厳格な教えです。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "車検前日確認のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="38" r="2.5" fill="black"/><circle cx="58" cy="38" r="2.5" fill="black"/><path d="M44,48 Q50,44 56,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「明日の車検、もちろん行くよ。あ、今仕事中であまり長電話できないんだけど、持ち物とか大丈夫？」"
+                },
+                choices: [
+                    {
+                        text: "A: 「ありがとうございます！明日、もしご加入の自動車保険の証券がございましたらご一緒にお持ちください。当社の安心点検制度についてですが、これは当社の保険への切替を強要するものではなく、実はですね...」",
+                        score: 30,
+                        mood: -15,
+                        feedbackTitle: "⚠️ 忙しい状況を無視して説明が長すぎます (NG)",
+                        feedbackDesc: "マニュアル「Step2」にある通り、忙しいお客様へは『簡潔案内バージョン』でスピード対応すべきです。長話は逆効果になり不快感を与えます。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "B: 「車検のコバックです。明日の持ち物は車検証と諸費用のみで結構ですが、実は自動車保険の証券は持ってきていただかなくても店頭の端末で他社様のデータがすべて見られますので、明日手ぶらで起こしくださいね」",
+                        score: 40,
+                        mood: 5,
+                        feedbackTitle: "🤔 不適切な説明・他社証券は見られません (NG)",
+                        feedbackDesc: "他社の保険証券データは店頭端末で自動的に見られることはありません。証券の「持参・コピー回収」が案内のすべてのスタートラインです。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "C: 「ありがとうございます！では明日の持ち物確認です。車検証と諸費用、それと自動車保険の証券もお忘れなくご一緒にお持ちください。今ご加入の内容が○○様にとって安心か、無料点検させていただくサービスを当店で行っております！」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！マニュアル完全準拠の「簡潔・前日コール」 (BEST)",
+                        feedbackDesc: "素晴らしい！マニュアルに示された「①簡潔案内バージョン」をそっくりそのまま実践できています。お忙しいお客様に対して必要な持ち物を明確にし、証券持参の理由（無料点検サービス）をスマートに訴求できています。",
+                        icon: "✅"
+                    }
+                ]
+            },
+            {
+                chapter: "第2章",
+                title: "代車貸出と証券回収ルール",
+                mission: "代車をご利用のお客様が、店頭で「保険証券を持ってきていない」と言われました。ミックの『代車貸出時の原則禁止ルール』に沿った対応を選びましょう。",
+                hint: "マニュアルでは『代車貸出時に保険証券の提示がない場合（無保険含む）、代車の貸出は原則禁止。マネジャーなど所属長と確認すること』とされています。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "代車を借りる予定のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="36" r="2.5" fill="black"/><circle cx="58" cy="36" r="2.5" fill="black"/><path d="M42,48 Q50,52 58,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「車検中の代車をお願いしているよ。あ、保険証券？持ってきてないけど、代車なんだから貸してくれればそのまま乗って帰るよ？」"
+                },
+                choices: [
+                    {
+                        text: "A: 「代車を貸し出すにあたり、自動車保険の加入状況を確認する決まりとなっております。証券の提示がない場合の貸出は『原則禁止』となりますので、もしスマートフォンなどでご加入中の保険画面や、マイページなどを見せていただくことはできませんか？」",
+                        score: 100,
+                        mood: 30,
+                        feedbackTitle: "✨ 完璧！代車貸出制限の厳守と代替アプローチ！ (BEST)",
+                        feedbackDesc: "お見事！マニュアル「Step3-2」のルールを完全に守っています。代車事故の賠償リスクから無保険や状況未確認での貸出は厳禁です。お客様にスマートフォンでのWEB提示（スマホ証券）へと自然に誘導できています。",
+                        icon: "✅"
+                    },
+                    {
+                        text: "B: 「それなら仕方ありませんね！万が一の事故の際は、お客様の任意保険の他車運転特約を使っていただきますので、今回は特別に証券なしで代車の鍵をお渡ししますね！」",
+                        score: 30,
+                        mood: 10,
+                        feedbackTitle: "⚠️ 重大なルール違反・貸出原則禁止ルールに抵触します (NG)",
+                        feedbackDesc: "確認を行わない安易な代車貸出は絶対にやってはいけません。万が一本当に無保険であったり他車運転特約の対象外だった場合、会社・お客様の双方に取り返しのつかない深刻なトラブルを招きます。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "C: 「ルールですので絶対に無理です！証券がないなら代車もお出ししませんし、今日の車検もお断りします！」",
+                        score: 40,
+                        mood: -20,
+                        feedbackTitle: "⚠️ 融通が利かず、極端に不快感を与えます (NG)",
+                        feedbackDesc: "ルールは大事ですが、威圧的な拒絶はCSを著しく低下させます。マネージャーなど所属長に相談の上、スマホでのWEB画面提示に促すか、もしくは出庫時に持参してもらうように動機づけ（啓発）を行うのが実務の教えです。",
+                        icon: "🔺"
+                    }
+                ]
+            },
+            {
+                chapter: "第3章",
+                title: "保険証券をスマートフォンで提示された場合",
+                mission: "お客様がスマートフォンでネット保険の画面を提示されました。コピー機での印刷（コピー）ができない場合の適切な処理手順を選びましょう。",
+                hint: "マニュアルでは『スマホ等での提示（コピー不可時）』において、『自動車保険簡易記入票』を使用して正確に書き写すことで、本部と連携して正確な見積りを作成します。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "ネット画面提示のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#E2F0FF"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="38" r="2" fill="black"/><circle cx="58" cy="38" r="2" fill="black"/><path d="M44,48 Q50,44 56,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「スマホのネット保険の画面を開いたよ。これで加入状況は確認できるかい？コピーは取れないけど...」"
+                },
+                choices: [
+                    {
+                        text: "A: 「画面を見せていただきありがとうございます！私の記憶にだいたいの内容を書き留めましたので、そのまま本部（保険部）に電話して口頭で見積りを作ってもらいますね！」",
+                        score: 40,
+                        mood: 5,
+                        feedbackTitle: "⚠️ 記憶違いによる誤ったお見積もりを招きます (NG)",
+                        feedbackDesc: "割引等級、年齢条件、事故有係数、特約、車両保険の有無などを正確に書面に残さないと、間違ったお見積りを提示することになりトラブルになります。記録は必須です。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "B: 「画面のご提示ありがとうございます！コピー機でのコピーができませんので、弊社の『自動車保険簡易記入票』に、必要な項目（等級・満期日・現在の特約など）を正確に書き写させていただきますね。これに基づいて、出庫までにぴったりな診断書を用意させていただきます！」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！実務マニュアル通りの「簡易記入票」の活用 (BEST)",
+                        feedbackDesc: "素晴らしい！マニュアル「Step3 証券持参の確認②」の通りに、コピー不可の場合は『自動車保険簡易記入票』を用いて正確に内容を記録できています。これによって本部（保険部）もミスなく正確なアドバイスシートを作成できます。",
+                        icon: "✅"
+                    },
+                    {
+                        text: "C: 「スマホの画面だと本部（保険部）に送信できないので、今回の無料健康診断サービスは省略させていただきますね」",
+                        score: 30,
+                        mood: -5,
+                        feedbackTitle: "⚠️ 提案チャンスの完全な損失です (NG)",
+                        feedbackDesc: "コピーが取れなくても、簡易記入票に転記することで、kintone等を通じて完全に本部と連携した見積作成が可能です。絶対にあきらめず、チャンスをものにしましょう。",
+                        icon: "🔺"
+                    }
+                ]
+            },
+            {
+                chapter: "第4章",
+                title: "自動車保険の加入がない（自賠責のみ）お客様",
+                mission: "自動車保険（任意）に未加入のお客様に対し、万が一の破滅的リスクや自賠責保険の限界を分かりやすくお伝えし、使命感を持って強く加入をお勧めしましょう。",
+                hint: "10人に1人は無保険の可能性がある現代。「自賠責（強制）の限界、高額賠償時の家族への影響、お引渡し直後からの補償手続き、最低限の保険料設定」を説明します。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "任意保険未加入のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="36" r="2.5" fill="black"/><circle cx="58" cy="36" r="2.5" fill="black"/><path d="M44,48 Q50,44 56,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「うちは車検の時に強制的に払わされる『自賠責保険』だけで十分だよ。わざわざ高い任意保険なんて入る必要ないでしょ？」"
+                },
+                choices: [
+                    {
+                        text: "A: 「自賠責保険だけでは、相手を怪我させたり死亡させた場合でも最大で120万円や3000万円までしか支払われません。これを超える数億円の賠償、ご自身のケガや同乗中のご家族のケガ、相手の車の修理費用は『一切補償されない』ため、ご自身だけでなく、ご家族や相手の方を不幸にしてしまいます。本日の車検お引渡し（出庫）と同時に最低限の安心からスタートできるプランをご準備してもよろしいですか？」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！使命感に溢れるマニュアル対話！ (BEST)",
+                        feedbackDesc: "素晴らしい！マニュアル「Step3-3 自動車保険の加入がないお客さまの場合」の要点（自賠責の限度・範囲の狭さ、高額賠償時の家族への波及、最低限の保険料からの出庫時即時補償）を完膚なきまでに捉えた最高のアプローチです。",
+                        icon: "✅"
+                    },
+                    {
+                        text: "B: 「自賠責だけでは事故が起きたら完全に人生が終わってしまいますよ！何があっても絶対に任意保険に入ってください！」",
+                        score: 40,
+                        mood: -15,
+                        feedbackTitle: "⚠️ 恐怖を煽るだけで、論理的な理由がありません (NG)",
+                        feedbackDesc: "感情的に脅すようなトーンは、お客様の警戒心を強め、へそを曲げてしまいます。自賠責の具体的な補償の薄さ（120万円限界等）を事実として丁寧に提示するのがプロのアドバイザーです。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "C: 「そうなんですね。それでしたら任意保険は不要ですね。では今回の車検の自賠責費用のみ進めさせていただきます」",
+                        score: 30,
+                        mood: 5,
+                        feedbackTitle: "⚠️ プロ・ミック代理店としての役割を放棄しています (NG)",
+                        feedbackDesc: "無保険車をそのまま店舗から出しては、万が一のときに私たちはそのお客様を守ることができません。ミックの社会的責任として、必ず重要性を粘り強くアピールしなければなりません。",
+                        icon: "🔺"
+                    }
+                ]
+            },
+            {
+                chapter: "第5章",
+                title: "鈑金（板金）修理相談での「車両保険の賢い掛け方」",
+                mission: "お車の擦り傷の修理（鈑金）を「自費で直そうか」と悩んでいるお客様に、車両保険の『賢い掛け方・使い方のシミュレーション』をアドバイスしましょう。",
+                hint: "マニュアルでは『Car販売 ＞ 鈑金 ＞ 車検』の順で保険提案がし易いとされています。「車対車限定（エコノミー型）」で免責を10万円または20万円に設定することで、保険料を安く抑えつつ、台風による水没災害などの高額リスクに備える掛け方を提案します。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "鈑金相談のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="36" r="2.5" fill="black"/><circle cx="58" cy="36" r="2.5" fill="black"/><path d="M44,48 L56,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「ドアを少し擦っちゃってね。車両保険は高くなるから入っていないし、今回もなんとか自費で安く直してもらいたいんだけどね...」"
+                },
+                choices: [
+                    {
+                        text: "A: 「承知しました！それでしたら、今回は保険は一切関係ありませんので、自費での鈑金見積りのみ、最もお安く作らせていただきますね！」",
+                        score: 50,
+                        mood: 10,
+                        feedbackTitle: "🤔 鈑金作業単体のみで、保険提案の機会を逃しています (微妙)",
+                        feedbackDesc: "お車の傷相談は最大の保険提案機会です！今回の自費修理をお手伝いした上で、次回に備えて「保険料を抑えて車両保険をセットする掛け方」を提案し、証券を預かるべきです。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "B: 「傷の自費修理もお安くできますが、実は車両保険を『車対車限定（エコノミー型）』にし、かつ『免責金額（自己負担額）を10万円または20万円』に設定することで、通常の半額以下の保険料アップで、大雨や台風によるお車の水没、相手のある衝突など高額な損害にしっかり備えられる掛け方があります。一度、シミュレーションをしてみませんか？」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！実務マニュアルに則った車両保険のアドバイス！ (BEST)",
+                        feedbackDesc: "素晴らしい！マニュアル「鈑金修理のお客さま：車両保険の賢い掛け方」の内容（車対車限定＋免責10万・20万、水災等の自然災害対応、自費修理を覚悟している人への価値提示）を完全に盛り込んだ見事なアプローチです。",
+                        icon: "✅"
+                    },
+                    {
+                        text: "C: 「車両保険に入っていないのは致命的ですね。車検を通す前に、今すぐ高額なフルカバーの車両保険に入らないと来年大変なことになりますよ！」",
+                        score: 30,
+                        mood: -15,
+                        feedbackTitle: "⚠️ 決めつけと強引な売り込みはNGです (NG)",
+                        feedbackDesc: "フルカバーの車両保険をそのまま押し付けようとすると、保険料の高さに跳ね返されて拒絶を招きます。お客様に合わせた賢い設計案（免責金額の調整など）を提案することが大切です。",
+                        icon: "❌"
+                    }
+                ]
+            },
+            {
+                chapter: "第6章",
+                title: "車検受付（入庫時）のテスト・クロージング",
+                mission: "入庫時の一通りのお車の確認手続きを終えました。お引渡し（出庫時）に保険提案をスムーズに行うための、マニュアル上の「テスト・クロージング」を実行しましょう。",
+                hint: "入庫時の最大のゴールは、マニュアルに明記されている通り『出庫時に提案・アドバイスをさせていただく了承（時間）を得る』ことです。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "車検入庫のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="38" r="2.5" fill="black"/><circle cx="58" cy="38" r="2.5" fill="black"/><path d="M42,48 Q50,52 58,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「保険証券も見せたし、安心点検サービス？もお願いするよ。車検は明日の夕方引取りでいいね？」"
+                },
+                choices: [
+                    {
+                        text: "A: 「ありがとうございます！それでは、お預かりした証券を元に、私どもでムダのないぴったりの『アドバイスシート（お見積書）』を作成してお待ちします。明日の車検お引渡し（出庫）時に、5分だけ内容をご説明させていただくお時間をいただいてもよろしいでしょうか？」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！実務マニュアル通りのテストクロージング (BEST)",
+                        feedbackDesc: "お見事！マニュアル「⑤入庫案内時のテスト・クロージング」のトークそのものです。これによって出庫時の提案機会が100%確約され、お引渡し時にスムーズに商談に入ることができます。",
+                        icon: "✅"
+                    },
+                    {
+                        text: "B: 「はい、また満期近くになったらメールか電話でアプローチしますので、今回はこれだけで大丈夫です。お気をつけて！」",
+                        score: 40,
+                        mood: 5,
+                        feedbackTitle: "⚠️ 提案機会の先送り（勿体ない）",
+                        feedbackDesc: "車検で車を預かっている間こそが、最も美しく無駄のない見積書を保険部と連携して作り、対面でお渡ししてアピールできる最大のチャンスです。満期まで放置してはアプローチタイミングを失います。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "C: 「それなら今すぐ車検の進行を止めて、ここで保険の申込手続きをしちゃいましょう！15分ほどお時間をください！」",
+                        score: 30,
+                        mood: -15,
+                        feedbackTitle: "⚠️ 焦りすぎはNG！車検入庫を優先させましょう (NG)",
+                        feedbackDesc: "お客様はお車の預け入れでご来店されています。その場での強引な契約締結を迫ると車検業務が遅れ、お客様の計画を狂わせてしまいます。車を預けている間（出庫まで）に、本部と連携して最高の提案用紙（アドバイスシート）を準備しておくのがコバックのプロです。",
+                        icon: "❌"
+                    }
+                ]
+            },
+            {
+                chapter: "第7章",
+                title: "20等級月払契約の「直近応当日」即時切り替え",
+                mission: "出庫時にアドバイスシートを提示したところ、お客様が「20等級だし、月払だから満期でいいよ」と言われました。満期まで待たずに切り替えていただく『直近の応当日』テクニックを実践しましょう。",
+                hint: "「20等級かつ月払契約」のお客様は、これまでの等級の進行に影響が出ないため、満期を待たず直近の応当日（今月中）に即時切り替えをすることができます。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "他社20等級・月払中のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#E2F0FF"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="38" r="2" fill="black"/><circle cx="58" cy="38" r="2" fill="black"/><path d="M44,48 Q50,44 56,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「ミックさんの提案はいいね。でも満期までまだ7ヶ月もあるんだ。20等級だし、月々払っているから、満期になったらまた声を掛けるよ」"
+                },
+                choices: [
+                    {
+                        text: "A: 「ありがとうございます。それなら仕方ありませんね、それではまた7ヶ月後のご満期の時期に改めてお電話か郵送でご案内しますね」",
+                        score: 45,
+                        mood: 10,
+                        feedbackTitle: "🤔 「即時切り替え」のマニュアルが頭に入っていません (勿体ない)",
+                        feedbackDesc: "20等級月払であれば、等級進行への不利益は全く無いため、満期まで待つ必要はありません。直近の応当日（例えば今月の〇日）で切り替えることで、今すぐ当店の事故時一元対応（代車即出）の権利を得ていただけます。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "B: 「今すぐ解約すると、これまでの等級や満期までの期間が全部リセットされて大損してしまいますが、それでも良ければ今切り替えます！」",
+                        score: 30,
+                        mood: -10,
+                        feedbackTitle: "⚠️ 誤った損益案内です (NG)",
+                        feedbackDesc: "20等級のお客様はこれ以上等級は上がらないため、中途解約して切り替えても一切損はしません。また、月払であれば未経過保険料の回収トラブルもなく、非常に簡単です。正しい不利益判定を行いましょう。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "C: 「実は○○様、20等級で月払契約の場合、直近の『応当日』を新しい契約の始期日としていただくと、現在の割引（20等級）を100%維持したまま、満期を待たずに今月中に当店の一元管理（代車無料・積載車急行）に切り替えることができます！手続きの段取りもその場ですべてお手伝いしますよ！」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！マニュアル【即時切り替え】アプローチ！ (BEST)",
+                        feedbackDesc: "素晴らしい！マニュアル「Step5-2 自動車保険の切り替えを予約いただくようなつもりで案内」および「20等級月払契約の対応」を完全に理解し、目の前のお客様に「今切り替えるべき納得の理由」を提示できています。",
+                        icon: "✅"
+                    }
+                ]
+            },
+            {
+                chapter: "第8章",
+                title: "他社ネット型（通販保険）との対抗（ワンストップ解決）",
+                mission: "「ネット保険は圧倒的に安いから変えない」というお客様。コバック×ミックが誇る『お電話一本トータルサポート』を正しく訴求して、価格差を超える安心価値を提案してください。",
+                hint: "ネット保険の「安さ」は認めた上で、万が一のパニック時に、レッカー、代車、工場手配、保険請求を全て自分で別々に電話交渉しなければならない弱点を突きます。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "他社ネット保険ご加入のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#374151"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="38" r="2.5" fill="black"/><circle cx="58" cy="38" r="2.5" fill="black"/><path d="M44,46 L56,46" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「うちはネット保険なんだよね。とにかく保険料が安いから、ミックさんがどれだけ親切でもそこには勝てないでしょ？」"
+                },
+                choices: [
+                    {
+                        text: "A: 「ネット保険は安いですが、事故のときはコールセンターが全然繋がらず、すべて自分で処理させられて最悪ですよ！絶対にコバックに変えるべきです！」",
+                        score: 35,
+                        mood: -20,
+                        feedbackTitle: "⚠️ 根拠のない他社誹謗は反発を招きます (NG)",
+                        feedbackDesc: "他社のサービスを一方的に批判することは、それを選んでいるお客様の判断を否定することになります。相手を尊重した上で、私たちの『一元対応（物理的な代車や修理）』の優位性を伝えましょう。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "B: 「おっしゃる通りネットは安いですね。それなら仕方ありません。車検だけは今後もコバックにお任せください」",
+                        score: 30,
+                        mood: 5,
+                        feedbackTitle: "⚠️ あきらめるのは早すぎます (NG)",
+                        feedbackDesc: "事故時のレッカー・代車手配の煩雑さについて、お客様がまだ知らない重要ポイントをアドバイスしましょう。価格以上のサービスを理解していただくチャンスです。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "C: 「確かにネット型は安さが魅力ですね！ただ、万が一事故に遭われた時、ネット保険だとレッカーの手配、代車の確保、修理工場の選定をお客様ご自身で行う必要がございます。当店なら『お電話一本』で、レッカー車に無料の代車を載せて急行し、修理から保険交渉まですべてワンストップで完了します。パニックの際のこの安心感こそが、コバックでお任せいただく最大の強みです！」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！コバック×ミックの「一元サポート」訴求！ (BEST)",
+                        feedbackDesc: "お見事！マニュアル「Step5-1 コバックの自動車保険の強み（トータル・サポート）」を的確にアピールできています。実店舗にサービス機能があるコバックだからこそできる最高の差別化アプローチです。",
+                        icon: "✅"
+                    }
+                ]
+            },
+            {
+                chapter: "第9章",
+                title: "他社解約の「店頭でのその場電話連携」",
+                mission: "ご成約をいただきました。他社保険の解約について「電話したりハガキを書くのが面倒だなぁ」と言われるお客様へ、マニュアル通りのスムーズな手配を行いましょう。",
+                hint: "マニュアル「Step5-3 他社契約を解約してご契約いただく場合」では、面倒な解約を簡単にするため『その場でスタッフから他社カスタマーセンターに直接電話を掛け、本人確認のみ代わってもらう』よう規定されています。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "解約手続きに不安のあるお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="36" r="2.5" fill="black"/><circle cx="58" cy="36" r="2.5" fill="black"/><path d="M44,48 Q50,44 56,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「じゃあコバックさんの保険にするよ。でも、今のネット保険の解約手続きとか、ウェブにログインして解約書類を探して書いたりするの、よく分からなくて面倒くさいなあ」"
+                },
+                choices: [
+                    {
+                        text: "A: 「それでしたら、お帰りの際、ご自宅で今のネット保険会社のホームページから解約手続きをお願いします！ログインIDなどは証券に書いてあると思いますよ！」",
+                        score: 50,
+                        mood: 5,
+                        feedbackTitle: "🤔 自宅での手続きは、結局面倒で解約を失念します (微妙)",
+                        feedbackDesc: "持ち帰りにさせると手続きが遅れ、最悪の場合二重契約になったり、途中で面倒になって切り替え自体を断念されてしまう恐れがあります。その場で解決しましょう。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "B: 「ご安心ください！その面倒をすべて解消するため、今この場で私が、○○様がご加入中の他社カスタマーセンターに直接お電話をお繋ぎしますね。オペレーターへの要件（解約日等の伝達）は私が最初にお話しし、その後のご本人様確認のみ○○様にお電話をお代わりいただければ、その場で解約手続きが完了します！」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！実務マニュアル通りの「解約サポート（その場電話）」 (BEST)",
+                        feedbackDesc: "お見事！マニュアル「他社契約を解約してご契約いただく場合」のルール（店頭からカスタマーセンターに直接電話、本人が生年月日や住所を伝えるのみで完了）を完璧に実践できています。この迅速なサポートによって、取りこぼしなく確実に手続きが完了します。",
+                        icon: "✅"
+                    },
+                    {
+                        text: "C: 「あ、それなら私が○○様のふりをして、解約の電話を代わりにしちゃいますから、お名前と生年月日を教えてください！」",
+                        score: 30,
+                        mood: -20,
+                        feedbackTitle: "⚠️ 重大なコンプライアンス違反・成りすまし架電は厳禁 (NG)",
+                        feedbackDesc: "本人のふりをして他社へ電話をすることは重大なルール違反・犯罪行為に該当します。本人確認手続きは必ずお客様自身に行ってもらう必要があり、そのための橋渡し（店頭からの電話）を行うのが正しい手順です。",
+                        icon: "❌"
+                    }
+                ]
+            },
+            {
+                chapter: "第10章",
+                title: "保険契約に至らなかった場合の「反応A・B」の記録",
+                mission: "出庫時の商談を行いましたが、今回は残念ながら他社で継続されることになりました。次回以降の他社満期追跡を行うために、あなたが必ず実施すべき実務はどれですか？",
+                hint: "「現時点で残念ながら保険契約に至らなかったお客さまの今後の案内を管理・記録する」ため、タブレット（SSS・kintone・Mitekiなど）に『反応A・B』を登録します。",
+                customer: {
+                    name: "松戸 健一 様",
+                    type: "車検完了、お引渡し中のお客様",
+                    avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="36" r="2.5" fill="black"/><circle cx="58" cy="36" r="2.5" fill="black"/><path d="M42,48 Q50,52 58,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
+                    bubble: "「色々良いアドバイスを聞かせてくれてありがとう。今回は今のままで行くけど、また満期のときに声をかけてよ」"
+                },
+                choices: [
+                    {
+                        text: "A: 「ありがとうございます。それでは今回の保険のご案内はこれで終了しますね。また再来年の車検の際によろしくお願いします！」",
+                        score: 40,
+                        mood: 5,
+                        feedbackTitle: "⚠️ 車検は2年後・満期はその前にやってきます (NG)",
+                        heading: "他社で継続してしまった場合でも、次の他社満期日は『1年後』に訪れます。2年後の車検まで待っていては、次回のアプローチタイミングを完全に失ってしまいます。",
+                        icon: "❌"
+                    },
+                    {
+                        text: "B: 「ご検討ありがとうございました！また何かお困りのことがございましたら、いつでもコバックにお声掛けくださいね。お気をつけて！」（何も記録せずにそのままお客様をお見送りする）",
+                        score: 30,
+                        mood: 10,
+                        feedbackTitle: "⚠️ 案内記録なし・機会損失の原因になります (NG)",
+                        feedbackDesc: "マニュアルでは、成約にならなかったすべてのお客さまの案内結果を、タブレットの反応Ａ・Ｂに記録し、本部（保険部）の他社満期追跡管理に引き継ぐルールとなっています。放置は厳禁です。",
+                        icon: "🔺"
+                    },
+                    {
+                        text: "C: 「ご検討いただきありがとうございました！本日ご案内させていただいたお役立ち情報を基に、今回の他社ご満期の2ヶ月前に合わせて、改めてお得な見直し提案を郵送・ご連絡できるよう、タブレット上の『反応A・B登録』で次回アクションを設定、kintoneで保険部へ共有させていただきますね！」",
+                        score: 100,
+                        mood: 35,
+                        feedbackTitle: "✨ 完璧！「反応A・Bの記録」と次の一手への連携 (BEST)",
+                        feedbackDesc: "完璧です！ミックマニュアルの要である『反応A・Bの記録』を行い、次のアプローチタイミング（満期2ヶ月前）を管理しています。成約に至らなくとも、この徹底した仕組みこそが「長期的な顧客信頼」と「高いグループ内シェア」を支えています。",
+                        icon: "✅"
+                    }
+                ]
+            }
+        ];
+
+        // --- QUIZ DATA (10 Questions - No Timeout) ---
+        const quizQuestions = [
+            {
+                q: "「代理店ポリシー（安心チェックサービス）」をお見積書などの案内資料に同封し、入庫前にあらかじめ郵送しておくマニュアル上の最大の目的は何ですか？",
+                choices: [
+                    { text: "「当社のサービスを事前に理解してもらい、来店時に自動車保険の証券を忘れずに持参いただくための動機づけ（啓発）」", isCorrect: true },
+                    { text: "「郵便料金の余剰を消化するため、他店舗からのDMと一緒にまとめて封入する」", isCorrect: false },
+                    { text: "「車検基本料が他社よりも高額であることを事前に言い訳しておくため」", isCorrect: false },
+                    { text: "「保険の契約申込書をあらかじめ自宅で全て記入してきていただくため」", isCorrect: false }
+                ],
+                explanation: "代理店ポリシーを事前郵送する目的は、「安心チェックサービス（啓発）」を事前にご理解いただき、来店時に自動車保険の証券を確実に持参いただくための準備（動機づけ）です。"
+            },
+            {
+                q: "入庫前日の電話での案内で、マニュアルにおいて最も重視されている「電話対応の姿勢」はどれですか？",
+                choices: [
+                    { text: "「自動車保険の仕組みや特約について、電話口で15分以上かけて詳細にレクチャーする」", isCorrect: false },
+                    { text: "「突然の電話であり時間の余裕が限られる中では『簡潔』に案内し、詳しくは来店時に説明することとして証券持参にフォーカスする」", isCorrect: true },
+                    { text: "「ネット保険の方が安いという話題が出たら、電話を切って別の予約を優先する」", isCorrect: false },
+                    { text: "「自社のみが取り扱うオリジナルの自賠責割引プランについて詳しく解説する」", isCorrect: false }
+                ],
+                explanation: "前日の電話案内は簡潔に！「突然の電話であり時間の余裕が限られる中では、詳しくは来店された際に説明する」とし、証券を忘れずに持ってきていただくことに全力を尽くすのが鉄則です。"
+            },
+            {
+                q: "マニュアルにおいて、代車を貸し出すお客様への「保険証券提示ルール」および「貸出制限」の取り扱いで正しいものはどれですか？",
+                choices: [
+                    { text: "「代車を貸し出す場合は、確認が面倒なので証券の回収は省略してよい」", isCorrect: false },
+                    { text: "「代車貸出時に保険証券の提示がない（無保険含む）場合、代車の貸出は『原則禁止』。マネージャーなど所属長に相談する」", isCorrect: true },
+                    { text: "「証券がなくても、免許証さえあれば代車は何日でも誰にでも貸し出すことができる」", isCorrect: false },
+                    { text: "「代車利用時には、必ず現在の任意保険を解約してもらい、当社の1日短期保険に強制加入させる」", isCorrect: false }
+                ],
+                explanation: "代車貸出時の無保険トラブルを防ぐため、マニュアルでは「代車貸出時に保険証券の提示がない場合、代車の貸出は原則禁止」としています。提示がない場合は必ず所属長と相談・確認しなければなりません。"
+            },
+            {
+                q: "自動車保険に一切加入していない（自賠責のみ）という無保険の顧客は、統計的・経験則上おおむね何人に1人存在する可能性があるとマニュアルに明記されていますか？",
+                choices: [
+                    { text: "「おおむね100人に1人程度」", isCorrect: false },
+                    { text: "「おおむね50人に1人程度」", isCorrect: false },
+                    { text: "「おおむね10人に1人の可能性（任意保険未加入リスク）」", isCorrect: true },
+                    { text: "「コバックでは、無保険の顧客は一切来店しないため存在しない」", isCorrect: false }
+                ],
+                explanation: "マニュアルには「統計的に、経験則から自動車を運転される方の10人に1人は無保険である可能性があります」と記述されています。私たちは使命感を持って任意保険の提案をしなければなりません。"
+            },
+            {
+                q: "自賠責保険（強制保険）の支払限度額について、マニュアルに示されている「傷害」の上限額はいくらですか？",
+                choices: [
+                    { text: "「120万円」", isCorrect: true },
+                    { text: "「3000万円」", isCorrect: false },
+                    { text: "「4000万円」", isCorrect: false },
+                    { text: "「無制限」", isCorrect: false }
+                ],
+                explanation: "自賠責の限度額は「傷害：120万円、死亡：3000万円、後遺障害：4000万円（常時介護）」です。治療費だけでなく休業損害や慰謝料を含めると、120万円は重大事故の場合すぐに超過するため、任意保険の加入が不可欠です。"
+            },
+            {
+                q: "自動車ビジネスのフェーズにおいて、「保険案内のしやすさ」の難易度順序（簡単な順）として最も正しいものはどれですか？",
+                choices: [
+                    { text: "「車販 ＞ 鈑金 ＞ 車検」", isCorrect: true },
+                    { text: "「車検 ＞ 鈑金 ＞ 車販」", isCorrect: false },
+                    { text: "「鈑金 ＞ 車検 ＞ 車販」", isCorrect: false },
+                    { text: "「難易度はすべて完全に同じである」", isCorrect: false }
+                ],
+                explanation: "マニュアルには「自動車ビジネスのフェーズにおける保険案内のしやすさは『車販 ＞ 鈑金 ＞車検』です。車検から保険獲得ができているスタッフであれば、鈑金や車販からの獲得はさらに容易です」と記述されています。"
+            },
+            {
+                q: "鈑金（板金）修理の相談をフックに、車両保険の「賢い掛け方」を提案する場合、保険料を抑えて台風等の水災に備えるための免責金額設定の組み合わせはどれですか？",
+                choices: [
+                    { text: "「車両保険は一切セットせず、自費修理を絶対的な原則とすることをおすすめする」", isCorrect: false },
+                    { text: "「車対車限定補償（エコノミー型）かつ、免責金額を『10万円』または『20万円』に設定し、不要な自損事故コストを排除して保険料を抑え、自然災害等に備える」", isCorrect: true },
+                    { text: "「免責金額を0円に設定し、すべての単独事故に対して何回でも無料で直せる高額な一般型に加入させる」", isCorrect: false },
+                    { text: "「保険料を抑えるために、台風や大雨の水没災害は一切補償対象外とする特約を付帯する」", isCorrect: false }
+                ],
+                explanation: "通勤等で使用されるお客様には、車対車限定（エコノミー型）かつ免責を10万または20万に設定することで、自損事故の補償を省いて保険料を大幅に抑えつつ、台風や洪水による水没災害などの高額リスクに備える「賢い掛け方」がアドバイスできます。"
+            },
+            {
+                q: "車検受付（入庫案内）時の「テスト・クロージング」における最大のゴールは何ですか？",
+                choices: [
+                    { text: "「その場でお見積もりを渡し、車検の進行を止めてすぐに保険契約書を書いてもらうこと」", isCorrect: false },
+                    { text: "「出庫（お引渡し）時までに保険部と連携して『アドバイスシート（お見積書）』を用意し、説明をさせていただく『了承・時間』を得ること」", isCorrect: true },
+                    { text: "「満期時の予約として、他社の継続手続きをしないように手付金1万円をいただくこと」", isCorrect: false },
+                    { text: "「お客様から他社の解約手続き費用として手数料を徴収すること」", isCorrect: false }
+                ],
+                explanation: "車検入庫時のゴールは「出庫時に見積書（アドバイスシート）を使ってお話しさせていただく了承を得る」ことです。車検整備時間を見積作成の時間として有効活用できます。"
+            },
+            {
+                q: "出庫後の活動管理において、「他社満期」や「成約にならなかったお客様」の今後の追跡案内を管理するため、タブレットに記録・連携するマニュアル上の仕組みは何ですか？",
+                choices: [
+                    { text: "「Looker Studioでの経営会議用レポートの送信」", isCorrect: false },
+                    { text: "「Notionの社内マニュアルへの氏名追記」", isCorrect: false },
+                    { text: "「反応A・Bの記録（次回の満期等アプローチタイミングの管理）」", isCorrect: true },
+                    { text: "「自賠責保険共同システム e-JIBAI への登録」", isCorrect: false }
+                ],
+                explanation: "成約に至らなかったお客様の今後の案内を管理・記録するため、タブレットで「反応A・B」を記録し、次回（満期2ヶ月前等）に保険部から見積もりを発送して店舗で再アプローチする他社満期管理フローに連携します。"
+            },
+            {
+                q: "他社から乗り換えてご成約いただく際、現在の他社契約を解約する「最も確実で心理的障壁の少ない解約サポートプロセス」はどれですか？",
+                choices: [
+                    { text: "「お客様に『解約ハガキ』を手渡し、自宅に帰ってからお客様が一人で手配するよう促す」", isCorrect: false },
+                    { text: "「その場で、スタッフが他社のカスタマーセンターに直接電話を繋ぎ、本人確認の手続き（お名前・生年月日確認等）のみをお客様に代わって手続きしていただく（その場電話連携）」", isCorrect: true },
+                    { text: "「他社には何も連絡せず、ミックの新しい保険の契約日を満期日として二重に保険料を払い続けてもらう」", isCorrect: false },
+                    { text: "「他社のマイページIDとパスワードを教えていただき、スタッフが自宅でネット解約を代行する」", isCorrect: false }
+                ],
+                explanation: "解約手続きの面倒をなくすため、店頭から他社カスタマーセンターにお電話を繋ぎ、本人確認のみお客様に代わってもらう「その場電話連携（店舗から直接電話）」が最も推奨され、切り替え率の高いプロセスです。"
+            }
+        ];
+
+        // --- NAVIGATION FUNCTIONS ---
+        function showScreen(screenId) {
+            document.querySelectorAll('main > section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            const activeScreen = document.getElementById(screenId);
+            activeScreen.classList.remove('hidden');
+            activeScreen.classList.add('animate-fade-in');
+        }
+
+        function goHome() {
+            showScreen('screen-home');
+        }
+
+        // --- MODE STARTERS ---
+        function startMode(mode) {
+            currentMode = mode;
+            if (mode === 'story') {
+                currentStoryIndex = 0;
+                storyScore = 0;
+                storyMood = 50;
+                initStoryStep();
+                showScreen('screen-story');
+            } else if (mode === 'quiz') {
+                currentQuizIndex = 0;
+                quizCorrectCount = 0;
+                initQuizQuestion();
+                showScreen('screen-quiz');
+            } else if (mode === 'sheet') {
+                showScreen('screen-sheet');
+            }
+        }
+
+        // --- STORY MODE LOGIC ---
+        function initStoryStep() {
+            const data = storyChapters[currentStoryIndex];
+            
+            // UI elements updating
+            document.getElementById('story-chapter-badge').innerText = data.chapter;
+            document.getElementById('story-chapter-title').innerText = data.title;
+            document.getElementById('story-mission-text').innerText = data.mission;
+            document.getElementById('story-hint-box').innerHTML = `<strong>💡 ミックのアドバイス:</strong> ${data.hint}`;
+            document.getElementById('story-customer-name').innerText = data.customer.name;
+            document.getElementById('story-customer-tag').innerText = data.customer.type;
+            document.getElementById('story-bubble-text').innerText = data.customer.bubble;
+            
+            // Inject avatar SVG
+            document.getElementById('story-avatar-container').innerHTML = data.customer.avatar;
+
+            // Reset Mood bar and score display
+            updateStoryHeader();
+
+            // Hide feedback box & choices area initially, show the prep (thinking) area
+            document.getElementById('story-feedback').classList.add('hidden');
+            document.getElementById('story-options').classList.add('hidden');
+            document.getElementById('story-prep-area').classList.remove('hidden');
+
+            const optionsContainer = document.getElementById('story-options');
+            optionsContainer.innerHTML = '';
+        }
+
+        // Triggered by "Show Choices" button click
+        function showStoryChoices() {
+            // Hide prep area
+            document.getElementById('story-prep-area').classList.add('hidden');
+
+            const optionsContainer = document.getElementById('story-options');
+            optionsContainer.innerHTML = '';
+            optionsContainer.classList.remove('hidden');
+
+            const data = storyChapters[currentStoryIndex];
+
+            // Inject Choice Buttons
+            data.choices.forEach((choice, index) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-xl border border-gray-200 bg-gray-50 hover:bg-blue-50 hover:border-blue-300 transition-all font-medium text-xs md:text-sm text-gray-800 flex items-start space-x-3 shadow-sm btn-hover animate-fade-in";
+                btn.innerHTML = `
+                    <div class="mt-1 bg-white text-gray-500 w-5 h-5 rounded-full flex items-center justify-center font-bold text-xs shadow-inner shrink-0 border border-gray-300">${String.fromCharCode(65 + index)}</div>
+                    <div class="flex-grow">${choice.text.slice(3)}</div>
+                `;
+                btn.onclick = () => selectStoryChoice(index);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function updateStoryHeader() {
+            document.getElementById('story-score').innerText = `${storyScore} 点`;
+            document.getElementById('story-mood-bar').style.width = `${storyMood}%`;
+            document.getElementById('story-mood-percent').innerText = `${storyMood}%`;
+
+            // Change color of progress bar based on score/mood
+            const bar = document.getElementById('story-mood-bar');
+            if (storyMood >= 70) {
+                bar.className = "bg-gradient-to-r from-emerald-500 to-green-500 h-full transition-all duration-500";
+            } else if (storyMood >= 40) {
+                bar.className = "bg-gradient-to-r from-yellow-500 to-orange-500 h-full transition-all duration-500";
+            } else {
+                bar.className = "bg-gradient-to-r from-red-600 to-rose-500 h-full transition-all duration-500";
+            }
+        }
+
+        function selectStoryChoice(choiceIndex) {
+            const data = storyChapters[currentStoryIndex];
+            const choice = data.choices[choiceIndex];
+
+            // Hide choices container
+            document.getElementById('story-options').classList.add('hidden');
+
+            // Apply modifications
+            storyScore += choice.score;
+            storyMood = Math.max(0, Math.min(100, storyMood + choice.mood));
+            updateStoryHeader();
+
+            // Set Feedback UI
+            const feedbackBox = document.getElementById('story-feedback');
+            const iconEl = document.getElementById('feedback-icon');
+            const titleEl = document.getElementById('feedback-title');
+            const descEl = document.getElementById('feedback-desc');
+            const nextBtnText = document.getElementById('btn-next-text');
+
+            feedbackBox.classList.remove('hidden');
+            
+            // Visual style of feedback box depending on score
+            if (choice.score === 100) {
+                feedbackBox.className = "space-y-4 bg-green-50 p-4 rounded-xl border border-green-300 transition-all duration-300 animate-fade-in";
+                iconEl.innerHTML = `<span class="text-green-600 text-3xl">🏆</span>`;
+            } else if (choice.score >= 50) {
+                feedbackBox.className = "space-y-4 bg-yellow-50 p-4 rounded-xl border border-yellow-300 transition-all duration-300 animate-fade-in";
+                iconEl.innerHTML = `<span class="text-yellow-600 text-3xl">⚠️</span>`;
+            } else {
+                feedbackBox.className = "space-y-4 bg-red-50 p-4 rounded-xl border border-red-300 transition-all duration-300 animate-fade-in";
+                iconEl.innerHTML = `<span class="text-red-600 text-3xl">❌</span>`;
+            }
+
+            titleEl.innerText = choice.feedbackTitle;
+            descEl.innerHTML = choice.feedbackDesc + `<br><span class="mt-2 block text-xs text-gray-500 font-bold">獲得スコア: +${choice.score}点 | お客様納得度変動: ${choice.mood >= 0 ? '+' : ''}${choice.mood}%</span>`;
+
+            // Adjust Next Button text
+            if (currentStoryIndex === storyChapters.length - 1) {
+                nextBtnText.innerText = `最終研修スコアを確認する`;
+            } else {
+                nextBtnText.innerText = `第${currentStoryIndex + 2}章へ進む`;
+            }
+        }
+
+        function nextStoryStep() {
+            if (currentStoryIndex < storyChapters.length - 1) {
+                currentStoryIndex++;
+                initStoryStep();
+            } else {
+                showTrainingResults('story');
+            }
+        }
+
+        // --- QUIZ MODE LOGIC (NO TIMEOUT) ---
+        function initQuizQuestion() {
+            const data = quizQuestions[currentQuizIndex];
+            
+            // Set up progress text
+            document.getElementById('quiz-progress').innerText = `${currentQuizIndex + 1} / ${quizQuestions.length} 問`;
+            document.getElementById('quiz-score').innerText = `${quizCorrectCount} / ${quizQuestions.length}`;
+
+            // Update Progress Bar
+            const progressPercent = ((currentQuizIndex + 1) / quizQuestions.length) * 100;
+            document.getElementById('quiz-progress-bar').style.width = `${progressPercent}%`;
+
+            // Put Question Text
+            document.getElementById('quiz-question-text').innerText = data.q;
+
+            // Hide feedback box
+            document.getElementById('quiz-feedback-box').classList.add('hidden');
+
+            // Generate option buttons
+            const optionsContainer = document.getElementById('quiz-options-container');
+            optionsContainer.innerHTML = '';
+            optionsContainer.classList.remove('hidden');
+
+            data.choices.forEach((choice, index) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-xl border border-gray-200 bg-gray-50 hover:bg-blue-50 hover:border-blue-300 transition-all text-xs md:text-sm font-medium text-gray-800 flex items-start space-x-2 shadow-sm btn-hover";
+                btn.innerHTML = `
+                    <div class="mt-0.5 bg-white text-gray-500 w-5 h-5 rounded-full flex items-center justify-center font-bold text-xs shadow-inner shrink-0 border border-gray-300">${index + 1}</div>
+                    <div class="flex-grow">${choice.text}</div>
+                `;
+                btn.onclick = () => selectQuizChoice(index);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectQuizChoice(selectedIndex) {
+            const data = quizQuestions[currentQuizIndex];
+            const optionsContainer = document.getElementById('quiz-options-container');
+            
+            // Hide options to avoid double selecting
+            optionsContainer.classList.add('hidden');
+
+            const feedbackBox = document.getElementById('quiz-feedback-box');
+            const iconEl = document.getElementById('quiz-feedback-icon');
+            const titleEl = document.getElementById('quiz-feedback-title');
+            const explEl = document.getElementById('quiz-feedback-explanation');
+            const nextBtn = document.getElementById('btn-quiz-next');
+
+            feedbackBox.classList.remove('hidden');
+
+            let isCorrect = false;
+            if (selectedIndex !== -1 && data.choices[selectedIndex].isCorrect) {
+                isCorrect = true;
+                quizCorrectCount++;
+            }
+
+            // UI styling based on correctness
+            if (isCorrect) {
+                feedbackBox.className = "mt-6 p-4 rounded-xl border bg-emerald-50 border-emerald-300 transition-all duration-300 animate-fade-in";
+                iconEl.innerHTML = "🎯";
+                titleEl.className = "font-black text-sm md:text-base text-emerald-800";
+                titleEl.innerText = "見事、正解です！抜群のアプローチセンス！";
+            } else {
+                feedbackBox.className = "mt-6 p-4 rounded-xl border bg-rose-50 border-rose-300 transition-all duration-300 animate-fade-in";
+                iconEl.innerHTML = "💡";
+                titleEl.className = "font-black text-sm md:text-base text-rose-800";
+                titleEl.innerText = "不正解です。ミック秘伝の正解を確認しましょう";
+            }
+
+            explEl.innerHTML = `
+                <div class="mb-2 text-xs font-bold text-gray-400">解説と対応アドバイス:</div>
+                <div class="text-xs md:text-sm text-gray-700 leading-relaxed">${data.explanation}</div>
+            `;
+
+            // Adjust Next Button Text
+            if (currentQuizIndex === quizQuestions.length - 1) {
+                nextBtn.innerText = "総合スコアを確認する";
+            } else {
+                nextBtn.innerText = "次の問題へ進む";
+            }
+        }
+
+        function nextQuizQuestion() {
+            if (currentQuizIndex < quizQuestions.length - 1) {
+                currentQuizIndex++;
+                initQuizQuestion();
+            } else {
+                showTrainingResults('quiz');
+            }
+        }
+
+        // --- RESULTS GENERATOR ---
+        function showTrainingResults(mode) {
+            showScreen('screen-result');
+            
+            const modeDesc = document.getElementById('result-mode-desc');
+            const scoreText = document.getElementById('result-score-text');
+            const rankText = document.getElementById('result-rank');
+            const commentText = document.getElementById('result-comment');
+
+            if (mode === 'story') {
+                modeDesc.innerText = "ストーリー会話シミュレーター 終了 (全10章)";
+                // Max points is 1000 (100 * 10 chapters)
+                const percentage = Math.round((storyScore / 1000) * 100);
+                scoreText.innerText = `${percentage} ％`;
+
+                if (percentage >= 90) {
+                    rankText.innerText = "🏆 伝説級のカリスマフロントリーダー";
+                    commentText.innerText = "完璧なアプローチセンスを完全に身につけています！お客様の『車検割引』や『事故時のパニック解決』という一番欲しい利益に寄り添い、自然に最高のアドバイスが提示できています。車検証と一緒に証券をスッと回収して、kintoneで本部サポートチームとどんどん連携していきましょう！";
+                } else if (percentage >= 70) {
+                    rankText.innerText = "🥈 実戦合格！優秀なアドバイザー";
+                    commentText.innerText = "お客様を惹きつけるスマートなトークが十分に実践できています。多少迷った選択肢があったかもしれませんが、解説の内容を心に留めることで店舗トップクラスの証券回収数を狙える実力があります。自信を持ってフロントに立ちましょう！";
+                } else {
+                    rankText.innerText = "🔰 成長期！店舗サポートをフルに頼ろう";
+                    commentText.innerText = "売り込みが先行してしまったり、お客様への利便性の説明が惜しい部分がありました。心配ありません、最初は全員同じです！まずは『お役立ちトーク集』をNotionなどで毎日見返しつつ、店舗の先輩や本部スタッフへいつでも相談してください。";
+                }
+            } else if (mode === 'quiz') {
+                modeDesc.innerText = "ニーズ喚起クイズ 終了 (全10問)";
+                const totalQ = quizQuestions.length;
+                scoreText.innerText = `${quizCorrectCount} / ${totalQ} 正解`;
+
+                if (quizCorrectCount === totalQ) {
+                    rankText.innerText = "🏆 ニーズ喚起・パーフェクトマスター";
+                    commentText.innerText = "見事、全問正解です！特約の重複から長期分割、在日ベトナム人のお客様へのご案内体制まで、ミック自動車保険のキーポイントを完全に完璧に理解されています。明日から店舗でその高い知識を存分に発揮してください！";
+                } else if (quizCorrectCount >= 7) {
+                    rankText.innerText = "✨ ジュニアアドバイザー合格";
+                    commentText.innerText = "非常に優秀なスコアです！自動車保険に関する実践知識がしっかり備わっています。間違えてしまった部分については、お役立ちマニュアルを再度チェックし、店舗リーダー会等でぜひ意見交換を行ってみてください！";
+                } else {
+                    rankText.innerText = "📝 要再復習：知識を確かなものに";
+                    commentText.innerText = "いくつかの重要な特約や、コバックならではの一括連携のルールについて理解が深まりきっていない箇所があるかもしれません。このクイズには何回でも挑戦可能です、繰り返し復習して、完璧なアドバイザーを目指しましょう！";
+                }
+            }
+        }
+
+        function retryMode() {
+            startMode(currentMode);
+        }
+
+        // --- CHEATSHEET TAB SWITCHING ---
+        function switchManualTab(tabId) {
+            document.getElementById('tab-kobac').classList.add('hidden');
+            document.getElementById('tab-talk').classList.add('hidden');
+            document.getElementById('tab-support').classList.add('hidden');
+
+            const btns = [
+                { id: 'btn-tab-kobac', color: 'border-red-500 text-red-600' },
+                { id: 'btn-tab-talk', color: 'border-green-500 text-green-600' },
+                { id: 'btn-tab-support', color: 'border-blue-500 text-blue-600' }
+            ];
+
+            btns.forEach(b => {
+                const btnEl = document.getElementById(b.id);
+                btnEl.className = "px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-transparent text-gray-500 hover:text-gray-700 focus:outline-none";
+            });
+
+            document.getElementById(tabId).classList.remove('hidden');
+
+            const activeBtn = document.getElementById('btn-' + tabId);
+            if (tabId === 'tab-kobac') {
+                activeBtn.className = "px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-red-500 text-red-600 focus:outline-none";
+            } else if (tabId === 'tab-talk') {
+                activeBtn.className = "px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-green-500 text-green-600 focus:outline-none";
+            } else if (tabId === 'tab-support') {
+                activeBtn.className = "px-4 py-2 text-xs md:text-sm font-bold border-b-2 border-blue-500 text-blue-600 focus:outline-none";
+            }
+        }
+    </script>
+</body>
+</html>
