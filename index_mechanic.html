@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>コバック×ミック自動車保険 メカニック向けトスアップトレーニングアプリ</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome (for icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
         body {
@@ -45,7 +42,6 @@
 </head>
 <body class="bg-slate-50 min-h-screen flex flex-col">
 
-    <!-- Header -->
     <header class="bg-white shadow-md border-b-4 border-red-600 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-3">
@@ -65,10 +61,8 @@
         </div>
     </header>
 
-    <!-- Main Content Area -->
     <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-6 flex flex-col justify-center">
 
-        <!-- ==================== HOME SCREEN ==================== -->
         <section id="screen-home" class="animate-fade-in flex flex-col justify-between space-y-6">
             <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10 border border-gray-100 flex flex-col md:flex-row items-center gap-8 my-auto">
                 <div class="w-full md:w-1/2 space-y-6">
@@ -82,9 +76,7 @@
                     <p class="text-gray-600 leading-relaxed text-sm md:text-base">
                         コバック自慢のメカニック・検査員の皆様、いつも高い技術でのお客様サポートをありがとうございます！<br>
                         日頃、保険のお話をすることはないかもしれませんが、<b>「お車の状態（部品摩耗、サビ、ドラレコ配線、傷）を直接説明できる」</b>皆様は、実はお客様から最も信頼されている保険のキーパーソンです。<br>
-                        このアプリでは、日常の整備説明のなかから自然に保険の話題を切り出し、お役立ち情報を添えてフロントスタッフ（または保険部）へパスする<b>「トスアップ（トス）」
-
-                        </b>のコツをゲーム感覚で習得できます。
+                        このアプリでは、日常の整備説明のなかから自然に保険の話題を切り出し、お役立ち情報を添えてフロントスタッフ（または保険部）へパスする<b>「トスアップ（トス）」</b>のコツをゲーム感覚で習得できます。
                     </p>
                     <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl">
                         <h3 class="font-bold text-blue-900 text-sm flex items-center">
@@ -121,7 +113,6 @@
                 </div>
             </div>
             
-            <!-- Quick Info Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm text-gray-500">
                 <div class="bg-white p-4 rounded-xl border border-gray-100 flex items-center space-x-3 shadow-sm">
                     <div class="p-3 bg-red-100 rounded-full text-red-600"><i class="fa-solid fa-screwdriver-wrench"></i></div>
@@ -147,9 +138,7 @@
             </div>
         </section>
 
-        <!-- ==================== STORY MODE ==================== -->
         <section id="screen-story" class="hidden flex-grow flex flex-col space-y-4 animate-fade-in">
-            <!-- Progress & Score Header -->
             <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-wrap justify-between items-center gap-4">
                 <div class="flex items-center space-x-3">
                     <button onclick="goHome()" class="text-gray-500 hover:text-gray-700 p-1"><i class="fa-solid fa-arrow-left text-lg"></i></button>
@@ -173,9 +162,7 @@
                 </div>
             </div>
 
-            <!-- Dialogue Interaction Area -->
             <div class="flex-grow grid grid-cols-1 lg:grid-cols-12 gap-4">
-                <!-- Customer info panel -->
                 <div class="lg:col-span-4 bg-gradient-to-b from-gray-50 to-gray-100 rounded-xl p-4 border border-gray-200 flex flex-col justify-between min-h-[220px] lg:min-h-[400px]">
                     <div class="text-center font-bold text-xs bg-gray-200 text-gray-700 py-1 px-3 rounded-full self-center">
                         整備工場・リフト横説明スペース
@@ -183,22 +170,19 @@
                     
                     <div class="flex flex-col items-center my-auto" id="customer-container">
                         <div id="story-avatar-container" class="w-28 h-28 md:w-36 md:h-36 bg-white rounded-full shadow-lg border-4 border-white flex items-center justify-center overflow-hidden">
-                            <!-- SVG Avatar will be injected here -->
-                        </div>
+                            </div>
                         <div class="mt-3 bg-gray-800 text-white font-extrabold px-4 py-1.5 rounded-full text-sm shadow-sm" id="story-customer-name">
                             コバック太郎様
                         </div>
                         <span id="story-customer-tag" class="text-xs text-blue-600 mt-1 font-semibold bg-blue-50 px-2 py-0.5 rounded border border-blue-200">車検・整備のお客様</span>
                     </div>
 
-                    <!-- Speech Bubble of customer -->
                     <div class="bg-white border border-gray-300 p-3 rounded-xl shadow-md relative mt-4">
                         <div class="absolute -top-2.5 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[8px] border-b-white"></div>
                         <p id="story-bubble-text" class="text-xs md:text-sm text-gray-800 font-medium text-center italic">「車の調子はどうだった？」</p>
                     </div>
                 </div>
 
-                <!-- Action / Choices Panel -->
                 <div class="lg:col-span-8 flex flex-col justify-between bg-white rounded-xl shadow-lg p-5 border border-gray-100">
                     <div class="space-y-3 mb-6">
                         <div class="flex items-center space-x-2 text-xs font-bold text-gray-400 uppercase tracking-wider">
@@ -213,7 +197,6 @@
                         </div>
                     </div>
 
-                    <!-- Brainstorming Zone (First state) -->
                     <div id="story-prep-area" class="p-6 bg-amber-50 border border-amber-200 rounded-xl text-center space-y-4">
                         <p class="text-sm font-bold text-amber-800">
                             <i class="fa-solid fa-lightbulb mr-1 animate-bounce"></i> アクティブラーニング実践中！
@@ -228,12 +211,9 @@
                         </button>
                     </div>
 
-                    <!-- Choices Area (Initially Hidden) -->
                     <div id="story-options" class="hidden space-y-3">
-                        <!-- Choice buttons dynamically added -->
-                    </div>
+                        </div>
 
-                    <!-- Feedback Area (Hidden until a choice is clicked) -->
                     <div id="story-feedback" class="hidden space-y-4 p-4 rounded-xl border transition-all duration-300">
                         <div class="flex items-start space-x-3">
                             <div id="feedback-icon" class="text-2xl mt-0.5"></div>
@@ -242,7 +222,11 @@
                                 <p id="feedback-desc" class="text-xs md:text-sm text-gray-700 leading-relaxed">フィードバック説明が入ります。</p>
                             </div>
                         </div>
-                        <div class="flex justify-end">
+                        <div class="flex justify-end space-x-2">
+                            <button onclick="backToStoryChoices()" class="px-5 py-2.5 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold rounded-lg shadow text-xs md:text-sm flex items-center space-x-2">
+                                <i class="fa-solid fa-rotate-left"></i>
+                                <span>この章をやり直す</span>
+                            </button>
                             <button id="btn-next-step" onclick="nextStoryStep()" class="px-5 py-2.5 bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-lg shadow text-xs md:text-sm flex items-center space-x-2">
                                 <span id="btn-next-text">次へ進む</span>
                                 <i class="fa-solid fa-arrow-right"></i>
@@ -253,7 +237,6 @@
             </div>
         </section>
 
-        <!-- ==================== QUIZ MODE (NO TIMEOUT) ==================== -->
         <section id="screen-quiz" class="hidden flex-grow flex flex-col space-y-4 animate-fade-in">
             <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-wrap justify-between items-center gap-4">
                 <div class="flex items-center space-x-3">
@@ -275,10 +258,8 @@
                 </div>
             </div>
 
-            <!-- Quiz Main Card -->
             <div class="bg-white rounded-xl shadow-lg border border-gray-100 p-6 flex flex-col justify-between flex-grow">
                 <div class="space-y-6">
-                    <!-- Progress Information instead of timer -->
                     <div class="space-y-1">
                         <div class="flex justify-between text-xs font-bold text-gray-500">
                             <span>焦らずじっくり、メカニックとして最適なトスアップの選択肢を選びましょう！</span>
@@ -296,13 +277,10 @@
                         </p>
                     </div>
 
-                    <!-- Options list -->
                     <div id="quiz-options-container" class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <!-- Dynamic buttons for quiz choices -->
-                    </div>
+                        </div>
                 </div>
 
-                <!-- Quiz feedback area -->
                 <div id="quiz-feedback-box" class="hidden mt-6 p-4 rounded-xl border transition-all duration-300">
                     <div class="flex items-start space-x-3">
                         <div id="quiz-feedback-icon" class="text-3xl"></div>
@@ -311,7 +289,11 @@
                             <div id="quiz-feedback-explanation" class="text-xs md:text-sm text-gray-700 leading-relaxed">解説文がここに入ります。</div>
                         </div>
                     </div>
-                    <div class="flex justify-end mt-4">
+                    <div class="flex justify-end mt-4 space-x-2">
+                        <button onclick="backToQuizOptions()" class="px-6 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold rounded-lg shadow text-xs md:text-sm flex items-center space-x-2">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <span>この問題をやり直す</span>
+                        </button>
                         <button id="btn-quiz-next" onclick="nextQuizQuestion()" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow text-xs md:text-sm">
                             次の問題へ進む
                         </button>
@@ -320,7 +302,6 @@
             </div>
         </section>
 
-        <!-- ==================== STUDY MANUAL SHEET ==================== -->
         <section id="screen-sheet" class="hidden flex-grow flex flex-col space-y-4 animate-fade-in">
             <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex justify-between items-center">
                 <div class="flex items-center space-x-3">
@@ -346,7 +327,6 @@
                     </button>
                 </div>
 
-                <!-- Tab Content 1 -->
                 <div id="tab-kobac" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-gradient-to-br from-red-50 to-white p-5 rounded-xl border border-red-100 space-y-3">
@@ -383,7 +363,6 @@
                     </div>
                 </div>
 
-                <!-- Tab Content 2 -->
                 <div id="tab-talk" class="hidden space-y-6">
                     <div class="space-y-4">
                         <div class="border-l-4 border-green-500 pl-4 py-2">
@@ -412,7 +391,6 @@
                     </div>
                 </div>
 
-                <!-- Tab Content 3 -->
                 <div id="tab-support" class="hidden space-y-4">
                     <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-3">
                         <h4 class="font-bold text-gray-800 text-sm md:text-base">プロメカニックの「引き際（トスアップ）」の基本型</h4>
@@ -447,7 +425,6 @@
             </div>
         </section>
 
-        <!-- ==================== TRAINING RESULT SCREEN ==================== -->
         <section id="screen-result" class="hidden flex-grow flex flex-col justify-center items-center my-auto py-8 animate-fade-in">
             <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full border border-gray-100 text-center space-y-6">
                 <div class="w-20 h-20 bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center text-3xl mx-auto shadow-inner animate-bounce">
@@ -477,7 +454,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-slate-800 text-slate-400 py-4 border-t border-slate-700">
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs">
             <p>© 2026 MIC Group. All Rights Reserved. (車検のコバック×ミック保険部)</p>
@@ -487,7 +463,6 @@
         </div>
     </footer>
 
-    <!-- Interactive JavaScript Logic -->
     <script>
         // Global State Variables
         let currentMode = ''; 
@@ -497,6 +472,11 @@
         
         let currentQuizIndex = 0;
         let quizCorrectCount = 0;
+
+        // 一時保持バッファ用変数
+        let lastStoryScoreChange = 0;
+        let lastStoryMoodChange = 0;
+        let isQuizAnsweredCorrectly = false;
 
         // --- STORY DATA (Simulation: 10 Chapters for Mechanics) ---
         const storyChapters = [
@@ -529,7 +509,7 @@
                         icon: "🔺"
                     },
                     {
-                        text: "C: 「録画確認は完璧です！安全のために素晴らしいですね。実は、最近の自動車保険には『強い衝撃を受けると自動で救急車の手配をしてくれる通信型ドラレコ特約』があり、命を守る安全機能として大変人気なんです。今ご加入の保険に月850円ほどでセットできるか、出庫時にお調べしてお待ちしてもよろしいですか？」",
+                        text: "C: 「録画確認は完璧です！安全のために素晴らしいですね。実は、最近の自動車保険には『強い衝撃を受けると自動で救急車の手配をしてくれる通信型ドラレコ特約』があり、命を守る安全機能として大変人気んです。今ご加入の保険に月850円ほどでセットできるか、出庫時にお調べしてお待ちしてもよろしいですか？」",
                         score: 100,
                         mood: 35,
                         feedbackTitle: "✨ 完璧！お客様を安心へ導くメカニックのスマートトス！ (BEST)",
@@ -623,7 +603,7 @@
                     name: "松戸 健一 様",
                     type: "下回り・サビ点検のお客様",
                     avatar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-24 h-24"><circle cx="50" cy="50" r="45" fill="#FFE2E2"/><circle cx="50" cy="35" r="18" fill="#4B5563"/><rect x="25" y="65" width="50" height="30" rx="10" fill="#1F2937"/><circle cx="42" cy="36" r="2.5" fill="black"/><circle cx="58" cy="36" r="2.5" fill="black"/><path d="M44,48 Q50,44 56,48" stroke="black" stroke-width="2" fill="none"/></svg>`,
-                    bubble: "「リフトに載せている車の下の方に、擦り傷があるね...。車両保険は高くて入ってないし、こういう傷の修理は自費で我慢するしかないかな」"
+                    bubble: "状況「リフトに載せている車の下の方に、擦り傷があるね...。車両保険は高くて入ってないし、こういう傷の修理は自費で我慢するしかないかな」"
                 },
                 choices: [
                     {
@@ -783,7 +763,7 @@
                         score: 30,
                         mood: -15,
                         feedbackTitle: "⚠️ 誤った保険知識と一方的な支払いの要求 (NG)",
-                        feedbackDesc: "他物の飛来である「飛び石」は3等級ダウン事故ではありません。誤った知識でお客様を絶望させるのではなく、正しい仕組みをお伝えして安心感を与えるのがプロです。",
+                        feedbackDesc: "他物の飛来である「飛び石」は3等級ダウン事故ではありません。誤った知識でおお客様を絶望させるのではなく、正しい仕組みをお伝えして安心感を与えるのがプロです。",
                         icon: "❌"
                     },
                     {
@@ -1094,10 +1074,16 @@
             // Hide choices container
             document.getElementById('story-options').classList.add('hidden');
 
-            // Apply modifications
-            storyScore += choice.score;
-            storyMood = Math.max(0, Math.min(100, storyMood + choice.mood));
-            updateStoryHeader();
+            // 次へ進むボタンが押されるまで、変動値を保持する（やり直しに対応するため）
+            lastStoryScoreChange = choice.score;
+            lastStoryMoodChange = choice.mood;
+
+            // ヘッダーの数値を一時的に更新してプレビュー
+            const previewScore = storyScore + choice.score;
+            const previewMood = Math.max(0, Math.min(100, storyMood + choice.mood));
+            document.getElementById('story-score').innerText = `${previewScore} 点`;
+            document.getElementById('story-mood-bar').style.width = `${previewMood}%`;
+            document.getElementById('story-mood-percent').innerText = `${previewMood}%`;
 
             // Set Feedback UI
             const feedbackBox = document.getElementById('story-feedback');
@@ -1131,7 +1117,20 @@
             }
         }
 
+        // 会話シミュレーターで「この章をやり直す」が押されたときの処理
+        function backToStoryChoices() {
+            // フィードバック領域を隠し、選択肢選択画面を再表示
+            document.getElementById('story-feedback').classList.add('hidden');
+            // ヘッダー表示を元々の確定済みの値に戻す
+            updateStoryHeader();
+            showStoryChoices();
+        }
+
         function nextStoryStep() {
+            // 次に進むタイミングでスコアと納得度を正式に加算・確定
+            storyScore += lastStoryScoreChange;
+            storyMood = Math.max(0, Math.min(100, storyMood + lastStoryMoodChange));
+            
             if (currentStoryIndex < storyChapters.length - 1) {
                 currentStoryIndex++;
                 initStoryStep();
@@ -1190,14 +1189,14 @@
 
             feedbackBox.classList.remove('hidden');
 
-            let isCorrect = false;
+            // 正解判定フラグ（次へ進むときにカウントするため保持）
+            isQuizAnsweredCorrectly = false;
             if (selectedIndex !== -1 && data.choices[selectedIndex].isCorrect) {
-                isCorrect = true;
-                quizCorrectCount++;
+                isQuizAnsweredCorrectly = true;
             }
 
             // UI styling based on correctness
-            if (isCorrect) {
+            if (isQuizAnsweredCorrectly) {
                 feedbackBox.className = "mt-6 p-4 rounded-xl border bg-emerald-50 border-emerald-300 transition-all duration-300 animate-fade-in";
                 iconEl.innerHTML = "🎯";
                 titleEl.className = "font-black text-sm md:text-base text-emerald-800";
@@ -1222,7 +1221,19 @@
             }
         }
 
+        // ニーズ喚起クイズで「この問題をやり直す」が押されたときの処理
+        function backToQuizOptions() {
+            document.getElementById('quiz-feedback-box').classList.add('hidden');
+            const optionsContainer = document.getElementById('quiz-options-container');
+            optionsContainer.classList.remove('hidden');
+        }
+
         function nextQuizQuestion() {
+            // 次に進むタイミングで正解だった場合のみ正解カウントを追加
+            if (isQuizAnsweredCorrectly) {
+                quizCorrectCount++;
+            }
+
             if (currentQuizIndex < quizQuestions.length - 1) {
                 currentQuizIndex++;
                 initQuizQuestion();
